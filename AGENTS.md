@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Team members, proposals, contacts and news live in src/data/*.ts; pages render from these lists so content can be edited without touching layout.
+- Brand colors are tokens (brand-red/blue/green/yellow/cream) in src/styles.css; never hardcode hex in components.

@@ -10,33 +10,115 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as EquipeRouteImport } from './routes/equipe'
+import { Route as NoticiasRouteImport } from './routes/noticias'
+import { Route as QuemSomosRouteImport } from './routes/quem-somos'
+import { Route as PropostasIndexRouteImport } from './routes/propostas.index'
+import { Route as PropostasSlugRouteImport } from './routes/propostas.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EquipeRoute = EquipeRouteImport.update({
+  id: '/equipe',
+  path: '/equipe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NoticiasRoute = NoticiasRouteImport.update({
+  id: '/noticias',
+  path: '/noticias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuemSomosRoute = QuemSomosRouteImport.update({
+  id: '/quem-somos',
+  path: '/quem-somos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PropostasIndexRoute = PropostasIndexRouteImport.update({
+  id: '/propostas/',
+  path: '/propostas/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PropostasSlugRoute = PropostasSlugRouteImport.update({
+  id: '/propostas/$slug',
+  path: '/propostas/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/equipe': typeof EquipeRoute
+  '/noticias': typeof NoticiasRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/propostas/$slug': typeof PropostasSlugRoute
+  '/propostas/': typeof PropostasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/equipe': typeof EquipeRoute
+  '/noticias': typeof NoticiasRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/propostas/$slug': typeof PropostasSlugRoute
+  '/propostas': typeof PropostasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/equipe': typeof EquipeRoute
+  '/noticias': typeof NoticiasRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/propostas/$slug': typeof PropostasSlugRoute
+  '/propostas/': typeof PropostasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contato'
+    | '/equipe'
+    | '/noticias'
+    | '/quem-somos'
+    | '/propostas/$slug'
+    | '/propostas/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contato'
+    | '/equipe'
+    | '/noticias'
+    | '/quem-somos'
+    | '/propostas/$slug'
+    | '/propostas'
+  id:
+    | '__root__'
+    | '/'
+    | '/contato'
+    | '/equipe'
+    | '/noticias'
+    | '/quem-somos'
+    | '/propostas/$slug'
+    | '/propostas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContatoRoute: typeof ContatoRoute
+  EquipeRoute: typeof EquipeRoute
+  NoticiasRoute: typeof NoticiasRoute
+  QuemSomosRoute: typeof QuemSomosRoute
+  PropostasSlugRoute: typeof PropostasSlugRoute
+  PropostasIndexRoute: typeof PropostasIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +130,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/equipe': {
+      id: '/equipe'
+      path: '/equipe'
+      fullPath: '/equipe'
+      preLoaderRoute: typeof EquipeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/noticias': {
+      id: '/noticias'
+      path: '/noticias'
+      fullPath: '/noticias'
+      preLoaderRoute: typeof NoticiasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quem-somos': {
+      id: '/quem-somos'
+      path: '/quem-somos'
+      fullPath: '/quem-somos'
+      preLoaderRoute: typeof QuemSomosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/propostas/': {
+      id: '/propostas/'
+      path: '/propostas'
+      fullPath: '/propostas/'
+      preLoaderRoute: typeof PropostasIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/propostas/$slug': {
+      id: '/propostas/$slug'
+      path: '/propostas/$slug'
+      fullPath: '/propostas/$slug'
+      preLoaderRoute: typeof PropostasSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContatoRoute: ContatoRoute,
+  EquipeRoute: EquipeRoute,
+  NoticiasRoute: NoticiasRoute,
+  QuemSomosRoute: QuemSomosRoute,
+  PropostasSlugRoute: PropostasSlugRoute,
+  PropostasIndexRoute: PropostasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
