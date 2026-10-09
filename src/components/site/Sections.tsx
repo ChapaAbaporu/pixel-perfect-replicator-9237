@@ -56,7 +56,7 @@ export function AboutSection() {
           </p>
           <Link to="/quem-somos" className="btn-red mt-8">Saiba mais <ArrowRight className="size-4" /></Link>
         </div>
-        <div className="card-pop relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-[2rem] bg-brand-paper p-8">
+        <div className="card-pop relative self-center overflow-hidden rounded-[2rem] bg-brand-paper p-7">
           <img
             src={emblemaCace}
             alt="Emblema do CACE UFMG: um triângulo vermelho dentro de um círculo creme, rodeado por triângulos facetados em tons de vermelho e laranja, com as inscrições CACE, UFMG e 2010"
