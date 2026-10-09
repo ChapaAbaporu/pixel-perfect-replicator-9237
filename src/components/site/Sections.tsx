@@ -3,9 +3,9 @@ import { ArrowRight } from "lucide-react";
 import { categories } from "@/data/proposals";
 import { CategoryCard } from "./Proposals";
 import { TeamCarousel } from "./TeamCarousel";
-import { Placeholder } from "./Placeholder";
 import { Blob, Leaf, Sun } from "./Decor";
 import logoAbaporu from "@/assets/logo-abaporu.png";
+import emblemaCace from "@/assets/emblema-cace.png";
 
 export function Hero() {
   return (
@@ -56,7 +56,13 @@ export function AboutSection() {
           </p>
           <Link to="/quem-somos" className="btn-red mt-8">Saiba mais <ArrowRight className="size-4" /></Link>
         </div>
-        <Placeholder label="Ilustração decorativa" className="aspect-[4/5] rounded-[2rem]" />
+        <div className="card-pop relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-[2rem] bg-brand-paper p-8">
+          <img
+            src={emblemaCace}
+            alt="Emblema do CACE UFMG: um triângulo vermelho dentro de um círculo creme, rodeado por triângulos facetados em tons de vermelho e laranja, com as inscrições CACE, UFMG e 2010"
+            className="w-full object-contain"
+          />
+        </div>
       </div>
     </section>
   );
