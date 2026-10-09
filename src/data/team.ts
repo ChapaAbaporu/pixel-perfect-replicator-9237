@@ -26,9 +26,9 @@ const roles = [
 
 export const team: TeamMember[] = roles.map((role, i) => ({
   id: `integrante-${i + 1}`,
-  name: `Integrante ${i + 1} (nome provisório)`,
-  role: `${role} (cargo provisório)`,
-  bio: "Texto provisório. Aqui entrará a apresentação pessoal escrita pelo próprio integrante: trajetória, curso, motivações e o que deseja construir no CACE.",
+  name: "Inserir texto",
+  role,
+  bio: "Inserir texto",
   photo: "",
   links: [],
 }));
