@@ -3,9 +3,8 @@ import { ArrowRight } from "lucide-react";
 import { categories } from "@/data/proposals";
 import { CategoryCard } from "./Proposals";
 import { TeamCarousel } from "./TeamCarousel";
-import { Blob, Leaf, Sun } from "./Decor";
+import { Blob, Sun } from "./Decor";
 import logoAbaporu from "@/assets/logo-abaporu.png";
-import emblemaCace from "@/assets/emblema-cace.png";
 
 export function Hero() {
   return (
@@ -38,9 +37,7 @@ export function Hero() {
 export function AboutSection() {
   return (
     <section className="relative overflow-hidden bg-brand-cream texture-paper">
-      <Leaf className="pointer-events-none absolute -left-10 top-10 size-40 text-brand-green/15" />
-      <Leaf className="pointer-events-none absolute -right-10 bottom-10 size-40 rotate-180 text-brand-red/15" />
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 md:px-6 lg:grid-cols-[1fr_1fr_0.8fr]">
+      <div className="relative mx-auto grid max-w-5xl gap-12 px-4 py-20 md:px-6 lg:grid-cols-2">
         <div>
           <h2 className="text-5xl text-brand-red">Quem somos</h2>
           <p className="mt-5 leading-relaxed text-brand-green">
@@ -55,13 +52,6 @@ export function AboutSection() {
             seu compromisso social.
           </p>
           <Link to="/quem-somos" className="btn-red mt-8">Saiba mais <ArrowRight className="size-4" /></Link>
-        </div>
-        <div className="card-pop relative self-center overflow-hidden rounded-[2rem] bg-brand-paper p-7">
-          <img
-            src={emblemaCace}
-            alt="Emblema do CACE UFMG: um triângulo vermelho dentro de um círculo creme, rodeado por triângulos facetados em tons de vermelho e laranja, com as inscrições CACE, UFMG e 2010"
-            className="w-full object-contain"
-          />
         </div>
       </div>
     </section>
