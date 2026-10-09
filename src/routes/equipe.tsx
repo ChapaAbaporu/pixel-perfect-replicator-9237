@@ -12,7 +12,7 @@ export const Route = createFileRoute("/equipe")({
   }),
   component: () => (
     <>
-      <PageHero title="Nossa equipe" text="Clique em um cartão para conhecer cada integrante." tone="green" />
+      <PageHero title="Inserir texto" text="Inserir texto" tone="green" />
       <TeamSection withHeading={false} />
     </>
   ),

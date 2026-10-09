@@ -21,10 +21,10 @@ const tones = ["bg-brand-red text-brand-paper", "bg-brand-blue text-brand-paper"
 function Contato() {
   return (
     <>
-      <PageHero title="Participe" text="Venha conhecer a Chapa Abaporu. O CACE se constrói com cada estudante." tone="yellow" />
+      <PageHero title="Inserir texto" text="Inserir texto" tone="yellow" />
       <section className="bg-brand-cream texture-paper">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
-          <h2 className="text-5xl text-brand-green">Nossos canais</h2>
+          <h2 className="text-5xl text-brand-green">Inserir texto</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {contacts.map((c, i) => {
               const Icon = iconFor(c.label);
@@ -43,8 +43,8 @@ function Contato() {
             })}
           </div>
           <div className="mt-16 rounded-2xl bg-brand-green p-10 text-brand-paper card-pop">
-            <h2 className="text-5xl text-brand-yellow">Sua voz importa</h2>
-            <p className="mt-4 max-w-2xl text-lg">Tem uma ideia, crítica ou sugestão? Participe das nossas rodas de conversa e ajude a construir as propostas da chapa.</p>
+            <h2 className="text-5xl text-brand-yellow">Inserir texto</h2>
+            <p className="mt-4 max-w-2xl text-lg">Inserir texto</p>
           </div>
         </div>
       </section>

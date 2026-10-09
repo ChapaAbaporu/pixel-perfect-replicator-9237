@@ -14,7 +14,7 @@ export const Route = createFileRoute("/propostas/")({
   }),
   component: () => (
     <>
-      <PageHero title="Nossas propostas" text="Queremos uma universidade cada vez mais popular, democrática e comprometida com a transformação social." tone="blue" />
+      <PageHero title="Inserir texto" text="Inserir texto" tone="blue" />
       <section className="bg-brand-cream texture-paper">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 py-16 sm:grid-cols-2 md:px-6 lg:grid-cols-4">
           {categories.map((c) => <CategoryCard key={c.slug} c={c} />)}

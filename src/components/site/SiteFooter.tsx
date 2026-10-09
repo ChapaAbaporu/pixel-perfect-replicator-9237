@@ -10,11 +10,11 @@ export function SiteFooter() {
       <Sun className="pointer-events-none absolute -right-10 -top-10 size-48 opacity-90" />
       <Cactus className="pointer-events-none absolute bottom-0 left-4 h-40 opacity-30 [&_g]:fill-brand-paper" />
       <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-6">
-        <h2 className="max-w-2xl text-5xl text-brand-yellow md:text-6xl">Vamos construir juntos essa universidade?</h2>
+        <h2 className="max-w-2xl text-5xl text-brand-yellow md:text-6xl">Inserir texto</h2>
         <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Logo />
-            <p className="mt-4 text-sm text-brand-paper/80">Chapa Abaporu — cultura, povo e democracia para o CACE.</p>
+            <p className="mt-4 text-sm text-brand-paper/80">Inserir texto</p>
           </div>
           <div>
             <h3 className="eyebrow mb-3 text-brand-yellow">Navegação</h3>
