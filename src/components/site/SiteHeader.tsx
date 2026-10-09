@@ -2,18 +2,12 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { navLinks, participateUrl } from "@/data/site";
+import logoAbaporu from "@/assets/logo-abaporu.png";
 
 export function Logo({ light = true }: { light?: boolean }) {
   return (
-    <span className="flex items-center gap-2" data-placeholder="Logotipo oficial">
-      <span
-        className={`grid size-10 place-items-center rounded-full border-2 border-dashed text-[0.55rem] font-bold ${
-          light ? "border-brand-paper/70 text-brand-paper" : "border-brand-green/60 text-brand-green"
-        }`}
-        aria-hidden="true"
-      >
-        LOGO
-      </span>
+    <span className="flex items-center gap-2">
+      <img src={logoAbaporu} alt="" aria-hidden="true" className="size-10 shrink-0" />
       <span className={`font-display text-2xl uppercase leading-none ${light ? "text-brand-paper" : "text-brand-green"}`}>
         Abaporu
       </span>
