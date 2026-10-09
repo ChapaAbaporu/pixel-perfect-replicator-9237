@@ -4,7 +4,7 @@ import { categories } from "@/data/proposals";
 import { CategoryCard } from "./Proposals";
 import { TeamCarousel } from "./TeamCarousel";
 import { Placeholder } from "./Placeholder";
-import { Blob, Cactus, Leaf, Sun } from "./Decor";
+import { Blob, Leaf, Sun } from "./Decor";
 import logoAbaporu from "@/assets/logo-abaporu.png";
 
 export function Hero() {
@@ -24,8 +24,6 @@ export function Hero() {
           </div>
         </div>
         <div className="relative">
-          <Sun className="absolute -right-4 -top-8 z-10 size-32 md:size-40" />
-          <Cactus className="absolute -bottom-4 -left-4 z-10 h-36 md:h-44" />
           <img
             src={logoAbaporu}
             alt="Emblema da Chapa Abaporu: a figura do Abaporu ao lado de um cacto e um sol, dentro de um círculo vermelho com a palavra ABAPORU"
