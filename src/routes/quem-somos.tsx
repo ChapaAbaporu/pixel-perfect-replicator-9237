@@ -16,18 +16,18 @@ export const Route = createFileRoute("/quem-somos")({
 });
 
 const blocks = [
-  { t: "Nossa história", c: "text-brand-red", p: "Texto provisório: apresentação e história da Chapa Abaporu, como surgiu e quem a constrói." },
-  { t: "Princípios e valores", c: "text-brand-green", p: "Participação, transparência, democracia, diversidade e compromisso com a universidade pública." },
-  { t: "Missão", c: "text-brand-red", p: "Fortalecer a participação estudantil e fazer do CACE um espaço coletivo de cultura e luta." },
-  { t: "Visão de universidade", c: "text-brand-green", p: "Uma universidade popular, democrática e comprometida com a transformação social." },
+  { t: "Inserir texto", c: "text-brand-red", p: "Inserir texto" },
+  { t: "Inserir texto", c: "text-brand-green", p: "Inserir texto" },
+  { t: "Inserir texto", c: "text-brand-red", p: "Inserir texto" },
+  { t: "Inserir texto", c: "text-brand-green", p: "Inserir texto" },
 ];
 
-const commitments = ["Escuta ativa dos estudantes", "Prestação de contas transparente", "Gestão democrática e aberta", "Defesa da universidade pública"];
+const commitments = ["Inserir texto", "Inserir texto", "Inserir texto", "Inserir texto"];
 
 function QuemSomos() {
   return (
     <>
-      <PageHero title="Quem somos" text="Cultura, povo e democracia para transformar a realidade." tone="red" />
+      <PageHero title="Inserir texto" text="Inserir texto" tone="red" />
       <section className="relative overflow-hidden bg-brand-cream texture-paper">
         <Leaf className="pointer-events-none absolute -right-10 top-20 size-48 text-brand-green/10" />
         <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-6">
@@ -40,7 +40,7 @@ function QuemSomos() {
             ))}
           </div>
           <div className="mt-20 rounded-2xl bg-brand-green p-8 text-brand-paper card-pop md:p-12">
-            <h2 className="text-5xl text-brand-yellow">Compromissos com os estudantes</h2>
+            <h2 className="text-5xl text-brand-yellow">Inserir texto</h2>
             <ul className="mt-8 grid gap-4 sm:grid-cols-2">
               {commitments.map((c, i) => (
                 <li key={c} className="flex items-center gap-4 text-lg">
@@ -50,7 +50,7 @@ function QuemSomos() {
               ))}
             </ul>
           </div>
-          <h2 className="mt-20 text-5xl text-brand-red">Atividades e campanha</h2>
+          <h2 className="mt-20 text-5xl text-brand-red">Inserir texto</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[1, 2, 3, 4, 5, 6].map((n) => <Placeholder key={n} label={`Foto de atividade ${n}`} className="aspect-[4/3] rounded-2xl" />)}
           </div>

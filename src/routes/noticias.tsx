@@ -19,14 +19,14 @@ export const Route = createFileRoute("/noticias")({
 function Noticias() {
   return (
     <>
-      <PageHero title="Notícias" text="Comunicados, atividades, eventos e atualizações da chapa." tone="blue" />
+      <PageHero title="Inserir texto" text="Inserir texto" tone="blue" />
       <section className="bg-brand-cream texture-paper">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
           {news.length === 0 ? (
             <div className="mx-auto max-w-lg rounded-2xl bg-brand-paper p-10 text-center card-pop">
               <Newspaper className="mx-auto size-12 text-brand-red" />
-              <h2 className="mt-4 text-4xl text-brand-green">Em breve</h2>
-              <p className="mt-3 text-brand-green/85">As atualizações da chapa serão disponibilizadas aqui em breve.</p>
+              <h2 className="mt-4 text-4xl text-brand-green">Inserir texto</h2>
+              <p className="mt-3 text-brand-green/85">Inserir texto</p>
             </div>
           ) : (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

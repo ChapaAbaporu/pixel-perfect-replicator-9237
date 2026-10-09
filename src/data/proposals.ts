@@ -27,13 +27,13 @@ export type Category = {
   proposals: Proposal[];
 };
 
-const sample = (area: string, n: number): Proposal => ({
-  title: `Proposta provisória ${n} — ${area}`,
-  summary: "Descrição resumida provisória. Substitua pelo texto oficial da proposta.",
-  problem: "Problema ou necessidade identificada (a preencher).",
-  objective: "Objetivo da proposta (a preencher).",
-  actions: ["Ação prevista 1 (a preencher)", "Ação prevista 2 (a preencher)"],
-  result: "Resultado esperado (a preencher).",
+const sample = (n: number): Proposal => ({
+  title: `Inserir texto ${n}`,
+  summary: "Inserir texto",
+  problem: "Inserir texto",
+  objective: "Inserir texto",
+  actions: ["Inserir texto", "Inserir texto"],
+  result: "Inserir texto",
   status: "Em elaboração",
 });
 
@@ -43,51 +43,44 @@ export const categories: Category[] = [
     name: "Comunicação",
     tone: "red",
     icon: "megaphone",
-    short: "Comunicação popular, criativa e acessível para todo o curso.",
-    intro:
-      "A secretaria de Comunicação quer fazer a informação circular, fortalecer a identidade coletiva e aproximar o CACE de cada estudante.",
-    spaceTitle: "Materiais e campanhas",
-    spaceText: "Espaço reservado para materiais gráficos, campanhas, fotografias e publicações.",
-    proposals: [sample("Comunicação", 1), sample("Comunicação", 2), sample("Comunicação", 3)],
+    short: "Inserir texto",
+    intro: "Inserir texto",
+    spaceTitle: "Inserir texto",
+    spaceText: "Inserir texto",
+    proposals: [sample(1), sample(2), sample(3)],
   },
   {
     slug: "relacoes-institucionais",
     name: "Relações Institucionais",
     tone: "blue",
     icon: "handshake",
-    short: "Diálogo, articulação política e representação estudantil.",
-    intro:
-      "A secretaria de Relações Institucionais busca construir pontes com estudantes, docentes, técnicos, movimentos sociais e instituições.",
-    spaceTitle: "Iniciativas de diálogo",
-    spaceText:
-      "Espaço reservado para iniciativas com estudantes, docentes, técnicos, movimentos sociais e instituições.",
-    proposals: [sample("Relações Institucionais", 1), sample("Relações Institucionais", 2), sample("Relações Institucionais", 3)],
+    short: "Inserir texto",
+    intro: "Inserir texto",
+    spaceTitle: "Inserir texto",
+    spaceText: "Inserir texto",
+    proposals: [sample(1), sample(2), sample(3)],
   },
   {
     slug: "extensao-e-pesquisa",
     name: "Extensão e Pesquisa",
     tone: "green",
     icon: "book",
-    short: "Conhecimento, cultura e integração entre universidade e sociedade.",
-    intro:
-      "A secretaria de Extensão e Pesquisa quer aproximar a produção de conhecimento da realidade e da sociedade.",
-    spaceTitle: "Projetos e eventos",
-    spaceText:
-      "Espaço reservado para projetos acadêmicos, eventos, atividades culturais, extensão e divulgação científica.",
-    proposals: [sample("Extensão e Pesquisa", 1), sample("Extensão e Pesquisa", 2), sample("Extensão e Pesquisa", 3)],
+    short: "Inserir texto",
+    intro: "Inserir texto",
+    spaceTitle: "Inserir texto",
+    spaceText: "Inserir texto",
+    proposals: [sample(1), sample(2), sample(3)],
   },
   {
     slug: "tesouraria",
     name: "Tesouraria",
     tone: "yellow",
     icon: "coins",
-    short: "Transparência, responsabilidade e prestação de contas.",
-    intro:
-      "A Tesouraria assume o compromisso com a organização financeira e a transparência total dos recursos do CACE.",
-    spaceTitle: "Transparência financeira",
-    spaceText:
-      "Espaço reservado para planejamento orçamentário, divulgação de receitas e despesas e prestação de contas.",
-    proposals: [sample("Tesouraria", 1), sample("Tesouraria", 2), sample("Tesouraria", 3)],
+    short: "Inserir texto",
+    intro: "Inserir texto",
+    spaceTitle: "Inserir texto",
+    spaceText: "Inserir texto",
+    proposals: [sample(1), sample(2), sample(3)],
   },
 ];
 
