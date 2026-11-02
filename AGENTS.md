@@ -10,7 +10,9 @@
 <!-- LOVABLE:END -->
 
 ## Project rules
-- Team members, proposals, contacts and news live in src/data/*.ts; pages render from these lists so content can be edited without touching layout.
-- Brand colors are tokens (brand-red/blue/green/yellow/cream) in src/styles.css; never hardcode hex in components.
+- Team members, proposals, contacts, news and meeting minutes live in src/data/*.ts; pages render from these lists so content can be edited without touching layout.
+- Brand colors are semantic tokens in src/styles.css; never hardcode hex in components. Legacy blue is replaced with organic brand tones, while the uploaded logo artwork remains unchanged.
+- The Atas page retains /noticias to preserve existing links; minutes only show a document link when a real URL is supplied.
+- Proposal categories, including DIREX, share the dynamic proposal route so adding a category does not require duplicating page layout.
 
 - Keep placeholder fields as individually numbered literal strings, including each team member and proposal; shared content retains its identifier so searching finds the editable source.
