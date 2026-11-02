@@ -1,16 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Newspaper } from "lucide-react";
+import { FileText } from "lucide-react";
 import { PageHero } from "@/components/site/Sections";
-import { Placeholder } from "@/components/site/Placeholder";
-import { news } from "@/data/site";
+import { minutes } from "@/data/minutes";
 
 export const Route = createFileRoute("/noticias")({
   head: () => ({
     meta: [
-      { title: "Notícias — Chapa Abaporu" },
-      { name: "description", content: "Comunicados, atividades, eventos e atualizações da Chapa Abaporu." },
-      { property: "og:title", content: "Notícias — Chapa Abaporu" },
-      { property: "og:description", content: "Acompanhe as atualizações da Chapa Abaporu." },
+      { title: "Atas — Chapa Abaporu" },
+      { name: "description", content: "Atas das reuniões semanais da Chapa Abaporu: discussões, decisões e encaminhamentos." },
+      { property: "og:title", content: "Atas — Chapa Abaporu" },
+      { property: "og:description", content: "Acompanhe as discussões, decisões e encaminhamentos das reuniões da Chapa Abaporu." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -21,30 +20,19 @@ export const Route = createFileRoute("/noticias")({
 function Noticias() {
   return (
     <>
-      <PageHero title="Inserir texto 153" text="Inserir texto 154" tone="blue" />
+      <PageHero title="Nossas Atas" text="Confira as atas das nossas reuniões semanais e acompanhe de perto as discussões, decisões e encaminhamentos da chapa Abaporu." tone="green" />
       <section className="bg-brand-cream texture-paper">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
-          {news.length === 0 ? (
-            <div className="mx-auto max-w-lg rounded-2xl bg-brand-paper p-10 text-center card-pop">
-              <Newspaper className="mx-auto size-12 text-brand-red" />
-              <h2 className="mt-4 text-4xl text-brand-green">Inserir texto 155</h2>
-              <p className="mt-3 text-brand-green/85">Inserir texto 156</p>
-            </div>
-          ) : (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {news.map((n) => (
-                <article key={n.id} className="overflow-hidden rounded-2xl bg-brand-paper card-pop">
-                  {n.image ? <img src={n.image} alt="" className="aspect-video w-full object-cover" /> : <Placeholder label="Imagem da notícia" className="aspect-video" />}
-                  <div className="p-6">
-                    <time className="eyebrow text-brand-red">{n.date}</time>
-                    <h2 className="mt-2 text-3xl text-brand-green">{n.title}</h2>
-                    <p className="mt-3 text-brand-green/85">{n.text}</p>
-                    {n.url && <a href={n.url} className="mt-4 inline-block font-display uppercase text-brand-red">Ler completa →</a>}
-                  </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {minutes.map((minute) => (
+                <article key={minute.id} className="rounded-2xl bg-brand-paper p-10 text-center card-pop">
+                  <FileText className="mx-auto size-12 text-brand-red" aria-hidden="true" />
+                  <h2 className="mt-4 text-4xl text-brand-green">{minute.title}</h2>
+                  <p className="mt-3 text-brand-ink">{minute.date}</p>
+                  {minute.url && <a href={minute.url} target="_blank" rel="noreferrer" className="btn-red mt-6">Abrir ata</a>}
                 </article>
               ))}
             </div>
-          )}
         </div>
       </section>
     </>

@@ -39,20 +39,28 @@
   --color-brand-cream: var(--brand-cream);
   --color-brand-paper: var(--brand-paper);
   --color-brand-ink: var(--brand-ink);
+  --color-brand-coral: var(--brand-coral);
+  --color-brand-mustard: var(--brand-mustard);
+  --color-brand-sage: var(--brand-sage);
+  --color-brand-terracotta: var(--brand-terracotta);
 }
 
 :root {
   --radius: 0.75rem;
-  --brand-red: #c5221a;
-  --brand-blue: #0754a0;
-  --brand-green: #07503a;
-  --brand-yellow: #f5b900;
-  --brand-cream: #f3e8ce;
-  --brand-paper: #f8eedb;
-  --brand-ink: #1d1a14;
+  --brand-red: #A8322D;
+  --brand-blue: var(--brand-green);
+  --brand-green: #344B38;
+  --brand-yellow: #D6A83D;
+  --brand-cream: #F1E7CE;
+  --brand-paper: var(--brand-cream);
+  --brand-ink: #30312D;
+  --brand-coral: #E77B68;
+  --brand-mustard: #C69A32;
+  --brand-sage: #A5B39A;
+  --brand-terracotta: #B9684E;
 
   --background: var(--brand-cream);
-  --foreground: var(--brand-green);
+  --foreground: var(--brand-ink);
   --card: var(--brand-paper);
   --card-foreground: var(--brand-green);
   --popover: var(--brand-paper);
@@ -61,14 +69,14 @@
   --primary-foreground: var(--brand-paper);
   --secondary: var(--brand-blue);
   --secondary-foreground: var(--brand-paper);
-  --muted: oklch(0.89 0.04 85);
-  --muted-foreground: oklch(0.42 0.05 160);
+  --muted: var(--brand-sage);
+  --muted-foreground: var(--brand-ink);
   --accent: var(--brand-yellow);
   --accent-foreground: var(--brand-ink);
   --destructive: var(--brand-red);
   --destructive-foreground: var(--brand-paper);
-  --border: oklch(0.36 0.06 160 / 25%);
-  --input: oklch(0.36 0.06 160 / 30%);
+  --border: var(--brand-sage);
+  --input: var(--brand-sage);
   --ring: var(--brand-yellow);
 }
 
@@ -80,7 +88,7 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: 0.01em; line-height: 0.95; text-transform: uppercase; }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: 0; line-height: 1.05; text-transform: uppercase; overflow-wrap: anywhere; }
   :focus-visible { outline: 3px solid var(--brand-yellow); outline-offset: 3px; }
 }
 
@@ -88,42 +96,42 @@
   /* Discreet paper/print texture */
   .texture-paper {
     background-image:
-      radial-gradient(oklch(0.3 0.05 80 / 6%) 1px, transparent 1px),
-      radial-gradient(oklch(0.3 0.05 80 / 4%) 1px, transparent 1px);
+       radial-gradient(color-mix(in srgb, var(--brand-ink) 6%, transparent) 1px, transparent 1px),
+       radial-gradient(color-mix(in srgb, var(--brand-ink) 4%, transparent) 1px, transparent 1px);
     background-size: 7px 7px, 13px 13px;
     background-position: 0 0, 3px 5px;
   }
   .texture-print {
-    background-image: radial-gradient(oklch(1 0 0 / 7%) 1px, transparent 1.2px);
+    background-image: radial-gradient(color-mix(in srgb, var(--brand-paper) 7%, transparent) 1px, transparent 1.2px);
     background-size: 6px 6px;
   }
   .btn-sun {
     display: inline-flex; align-items: center; gap: .6rem;
     background: var(--brand-yellow); color: var(--brand-ink);
-    font-family: var(--font-display); text-transform: uppercase; letter-spacing: .05em;
+    font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0;
     padding: .8rem 1.4rem; border-radius: 999px;
     box-shadow: 4px 4px 0 var(--brand-ink);
     transition: transform .15s ease, box-shadow .15s ease;
   }
-  .btn-sun:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--brand-ink); }
+  .btn-sun:hover { background: var(--brand-mustard); transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--brand-ink); }
   .btn-outline-cream {
     display: inline-flex; align-items: center; gap: .6rem;
     border: 2px solid var(--brand-paper); color: var(--brand-paper);
-    font-family: var(--font-display); text-transform: uppercase; letter-spacing: .05em;
+    font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0;
     padding: .75rem 1.3rem; border-radius: 999px; transition: background .15s;
   }
-  .btn-outline-cream:hover { background: oklch(1 0 0 / 12%); }
+  .btn-outline-cream:hover { background: color-mix(in srgb, var(--brand-paper) 12%, transparent); }
   .btn-red {
     display: inline-flex; align-items: center; gap: .6rem;
     background: var(--brand-red); color: var(--brand-paper);
-    font-family: var(--font-display); text-transform: uppercase; letter-spacing: .05em;
+    font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0;
     padding: .8rem 1.4rem; border-radius: 999px;
     box-shadow: 4px 4px 0 var(--brand-green);
     transition: transform .15s ease, box-shadow .15s ease;
   }
   .btn-red:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--brand-green); }
   .card-pop { box-shadow: 6px 6px 0 var(--brand-ink); border: 2px solid var(--brand-ink); }
-  .eyebrow { font-family: var(--font-display); letter-spacing: .2em; text-transform: uppercase; font-size: .8rem; }
+  .eyebrow { font-family: var(--font-display); letter-spacing: 0; text-transform: uppercase; font-size: .8rem; }
   .no-scrollbar { scrollbar-width: none; }
   .no-scrollbar::-webkit-scrollbar { display: none; }
 }

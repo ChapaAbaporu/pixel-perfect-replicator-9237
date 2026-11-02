@@ -13,7 +13,7 @@ export const Route = createFileRoute("/propostas/$slug")({
   },
   head: ({ loaderData }) => {
     const name = loaderData?.category.name ?? "Propostas";
-    const desc = loaderData?.category.short ?? "Propostas da Chapa Abaporu.";
+    const desc = `Conheça as propostas de ${name} da Chapa Abaporu para o CACE.`;
     return {
       meta: [
         { title: `${name} — Propostas da Chapa Abaporu` },

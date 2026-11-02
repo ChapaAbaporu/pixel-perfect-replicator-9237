@@ -27,5 +27,5 @@ export const team: TeamMember[] = [
   { id: "integrante-10", name: "Anne Alcantra", role: "Diretora adjunta de Pesquisa e Extensão", bio: "Inserir texto 165", photo: "", links: [] },
   { id: "integrante-11", name: "Zoe Ribas", role: "Diretora de Relações Institucionais", bio: "Inserir texto 166", photo: "", links: [] },
   { id: "integrante-12", name: "Júlia Mendes", role: "Diretora adjunta de Relações Institucionais", bio: "Inserir texto 167", photo: "", links: [] },
-  { id: "integrante-13", name: "Sara Gonçalves", role: "Inserir texto 168", bio: "Inserir texto 169", photo: "", links: [] },
+  { id: "integrante-13", name: "Sara Gonçalves", role: "Diretora de Cultura", bio: "Inserir texto 169", photo: "", links: [] },
 ];

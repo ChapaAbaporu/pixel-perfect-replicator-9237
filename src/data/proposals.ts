@@ -13,14 +13,14 @@ export type Proposal = {
   status?: string;
 };
 
-export type CategoryTone = "red" | "blue" | "green" | "yellow";
+export type CategoryTone = "red" | "terracotta" | "green" | "yellow" | "coral";
 
 export type Category = {
   slug: string;
   name: string;
   tone: CategoryTone;
-  icon: "megaphone" | "handshake" | "book" | "coins";
-  short: string;
+  icon: "megaphone" | "handshake" | "book" | "coins" | "users";
+  short?: string;
   intro: string;
   spaceTitle: string;
   spaceText: string;
@@ -29,11 +29,30 @@ export type Category = {
 
 export const categories: Category[] = [
   {
+    slug: "direx",
+    name: "DIREX",
+    tone: "coral",
+    icon: "users",
+    intro: "Inserir texto 170",
+    spaceTitle: "Inserir texto 171",
+    spaceText: "Inserir texto 172",
+    proposals: [
+      {
+        title: "Inserir texto 173",
+        summary: "Inserir texto 174",
+        problem: "Inserir texto 175",
+        objective: "Inserir texto 176",
+        actions: ["Inserir texto 177", "Inserir texto 178"],
+        result: "Inserir texto 179",
+        status: "Em elaboração",
+      },
+    ],
+  },
+  {
     slug: "comunicacao",
     name: "Comunicação",
     tone: "red",
     icon: "megaphone",
-    short: "Inserir texto 28",
     intro: "Inserir texto 29",
     spaceTitle: "Inserir texto 30",
     spaceText: "Inserir texto 31",
@@ -70,9 +89,8 @@ export const categories: Category[] = [
   {
     slug: "relacoes-institucionais",
     name: "Relações Institucionais",
-    tone: "blue",
+    tone: "terracotta",
     icon: "handshake",
-    short: "Inserir texto 32",
     intro: "Inserir texto 33",
     spaceTitle: "Inserir texto 34",
     spaceText: "Inserir texto 35",
@@ -111,7 +129,6 @@ export const categories: Category[] = [
     name: "Extensão e Pesquisa",
     tone: "green",
     icon: "book",
-    short: "Inserir texto 36",
     intro: "Inserir texto 37",
     spaceTitle: "Inserir texto 38",
     spaceText: "Inserir texto 39",
@@ -150,7 +167,6 @@ export const categories: Category[] = [
     name: "Tesouraria",
     tone: "yellow",
     icon: "coins",
-    short: "Inserir texto 40",
     intro: "Inserir texto 41",
     spaceTitle: "Inserir texto 42",
     spaceText: "Inserir texto 43",
@@ -190,8 +206,9 @@ export const getCategory = (slug: string) => categories.find((c) => c.slug === s
 
 /** Classes por cor (todas via tokens da identidade visual). */
 export const toneClasses: Record<CategoryTone, { bg: string; text: string; accent: string; soft: string }> = {
-  red: { bg: "bg-brand-red", text: "text-brand-paper", accent: "text-brand-yellow", soft: "text-brand-red" },
-  blue: { bg: "bg-brand-blue", text: "text-brand-paper", accent: "text-brand-yellow", soft: "text-brand-blue" },
+  red: { bg: "bg-brand-red", text: "text-brand-paper", accent: "text-brand-paper", soft: "text-brand-red" },
+  terracotta: { bg: "bg-brand-terracotta", text: "text-brand-ink", accent: "text-brand-ink", soft: "text-brand-red" },
+  coral: { bg: "bg-brand-coral", text: "text-brand-ink", accent: "text-brand-ink", soft: "text-brand-red" },
   green: { bg: "bg-brand-green", text: "text-brand-paper", accent: "text-brand-yellow", soft: "text-brand-green" },
   yellow: { bg: "bg-brand-yellow", text: "text-brand-green", accent: "text-brand-red", soft: "text-brand-green" },
 };

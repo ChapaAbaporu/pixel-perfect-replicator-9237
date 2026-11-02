@@ -18,18 +18,18 @@ export const Route = createFileRoute("/quem-somos")({
 });
 
 const blocks = [
-  { t: "Inserir texto 137", c: "text-brand-red", p: "Inserir texto 138" },
-  { t: "Inserir texto 139", c: "text-brand-green", p: "Inserir texto 140" },
-  { t: "Inserir texto 141", c: "text-brand-red", p: "Inserir texto 142" },
-  { t: "Inserir texto 143", c: "text-brand-green", p: "Inserir texto 144" },
+  { t: "REPRESENTAÇÃO ESTUDANTIL", c: "text-brand-red", p: "Um CACE que seja, de fato, a voz dos estudantes, defendendo seus interesses e construindo pontes de diálogo com professores, colegiado e instituição." },
+  { t: "IDENTIDADE E VISIBILIDADE", c: "text-brand-green", p: "Acreditamos na potência de Ciências do Estado. Queremos fortalecer a identidade do curso, divulgar suas possibilidades e ampliar seu reconhecimento dentro e fora da UFMG." },
+  { t: "FORMAÇÃO ACADÊMICA", c: "text-brand-red", p: "Mais oportunidades de aprendizado, pesquisa e extensão, com minicursos, oficinas, debates e aproximação entre estudantes, professores e pesquisadores." },
+  { t: "INTEGRAÇÃO E PARTICIPAÇÃO", c: "text-brand-green", p: "Um Centro Acadêmico presente na vida universitária, que aproxime diferentes turmas, incentive a participação e construa espaços de convivência e organização coletiva." },
 ];
 
-const commitments = ["Inserir texto 145", "Inserir texto 146", "Inserir texto 147", "Inserir texto 148"];
+const commitments = ["Escutar e representar os estudantes.", "Fortalecer a identidade de Ciências do Estado.", "Ampliar oportunidades acadêmicas e profissionais.", "Construir um CACE aberto, ativo e participativo."];
 
 function QuemSomos() {
   return (
     <>
-      <PageHero title="Inserir texto 149" text="Inserir texto 150" tone="red" />
+      <PageHero title="Quem somos" text="A Abaporu é uma chapa construída por estudantes que acreditam no potencial de Ciências do Estado e na força da participação coletiva. Queremos um Centro Acadêmico presente, representativo e comprometido com a construção de um curso mais reconhecido, integrado e aberto às possibilidades de seus estudantes." tone="red" />
       <section className="relative overflow-hidden bg-brand-cream texture-paper">
         <Leaf className="pointer-events-none absolute -right-10 top-20 size-48 text-brand-green/10" />
         <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-6">
@@ -42,7 +42,7 @@ function QuemSomos() {
             ))}
           </div>
           <div className="mt-20 rounded-2xl bg-brand-green p-8 text-brand-paper card-pop md:p-12">
-            <h2 className="text-5xl text-brand-yellow">Inserir texto 151</h2>
+            <h2 className="text-5xl text-brand-yellow">NOSSO COMPROMISSO</h2>
             <ul className="mt-8 grid gap-4 sm:grid-cols-2">
               {commitments.map((c, i) => (
                 <li key={c} className="flex items-center gap-4 text-lg">
@@ -52,7 +52,7 @@ function QuemSomos() {
               ))}
             </ul>
           </div>
-          <h2 className="mt-20 text-5xl text-brand-red">Inserir texto 152</h2>
+          <h2 className="mt-20 text-5xl text-brand-red">Uma chapa em movimento</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[1, 2, 3, 4, 5, 6].map((n) => <Placeholder key={n} label={`Foto de atividade ${n}`} className="aspect-[4/3] rounded-2xl" />)}
           </div>
