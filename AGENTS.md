@@ -12,3 +12,5 @@
 ## Project rules
 - Team members, proposals, contacts and news live in src/data/*.ts; pages render from these lists so content can be edited without touching layout.
 - Brand colors are tokens (brand-red/blue/green/yellow/cream) in src/styles.css; never hardcode hex in components.
+
+- Keep placeholder fields as individually numbered literal strings, including each team member and proposal; shared content retains its identifier so searching finds the editable source.

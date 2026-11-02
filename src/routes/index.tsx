@@ -8,6 +8,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Conheça a Chapa Abaporu para o CACE: cultura, povo e democracia para transformar a realidade." },
       { property: "og:title", content: "Chapa Abaporu — CACE" },
       { property: "og:description", content: "Cultura, povo e democracia para transformar a realidade." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,

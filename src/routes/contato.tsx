@@ -10,6 +10,8 @@ export const Route = createFileRoute("/contato")({
       { name: "description", content: "Fale com a Chapa Abaporu e participe da construção do CACE." },
       { property: "og:title", content: "Participe — Chapa Abaporu" },
       { property: "og:description", content: "Fale com a Chapa Abaporu e participe." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Contato,
@@ -21,10 +23,10 @@ const tones = ["bg-brand-red text-brand-paper", "bg-brand-blue text-brand-paper"
 function Contato() {
   return (
     <>
-      <PageHero title="Inserir texto" text="Inserir texto" tone="yellow" />
+      <PageHero title="Inserir texto 157" text="Inserir texto 158" tone="yellow" />
       <section className="bg-brand-cream texture-paper">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
-          <h2 className="text-5xl text-brand-green">Inserir texto</h2>
+          <h2 className="text-5xl text-brand-green">Inserir texto 159</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {contacts.map((c, i) => {
               const Icon = iconFor(c.label);
@@ -43,8 +45,8 @@ function Contato() {
             })}
           </div>
           <div className="mt-16 rounded-2xl bg-brand-green p-10 text-brand-paper card-pop">
-            <h2 className="text-5xl text-brand-yellow">Inserir texto</h2>
-            <p className="mt-4 max-w-2xl text-lg">Inserir texto</p>
+            <h2 className="text-5xl text-brand-yellow">Inserir texto 160</h2>
+            <p className="mt-4 max-w-2xl text-lg">Inserir texto 161</p>
           </div>
         </div>
       </section>

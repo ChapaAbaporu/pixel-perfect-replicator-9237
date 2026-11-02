@@ -11,6 +11,8 @@ export const Route = createFileRoute("/noticias")({
       { name: "description", content: "Comunicados, atividades, eventos e atualizações da Chapa Abaporu." },
       { property: "og:title", content: "Notícias — Chapa Abaporu" },
       { property: "og:description", content: "Acompanhe as atualizações da Chapa Abaporu." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Noticias,
@@ -19,14 +21,14 @@ export const Route = createFileRoute("/noticias")({
 function Noticias() {
   return (
     <>
-      <PageHero title="Inserir texto" text="Inserir texto" tone="blue" />
+      <PageHero title="Inserir texto 153" text="Inserir texto 154" tone="blue" />
       <section className="bg-brand-cream texture-paper">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
           {news.length === 0 ? (
             <div className="mx-auto max-w-lg rounded-2xl bg-brand-paper p-10 text-center card-pop">
               <Newspaper className="mx-auto size-12 text-brand-red" />
-              <h2 className="mt-4 text-4xl text-brand-green">Inserir texto</h2>
-              <p className="mt-3 text-brand-green/85">Inserir texto</p>
+              <h2 className="mt-4 text-4xl text-brand-green">Inserir texto 155</h2>
+              <p className="mt-3 text-brand-green/85">Inserir texto 156</p>
             </div>
           ) : (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

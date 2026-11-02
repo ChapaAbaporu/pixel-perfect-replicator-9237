@@ -3,9 +3,9 @@
  * Canais sem url aparecem como "a definir".
  */
 export const contacts: { label: string; handle: string; url: string }[] = [
-  { label: "Instagram", handle: "Inserir texto", url: "" },
-  { label: "E-mail", handle: "Inserir texto", url: "" },
-  { label: "WhatsApp", handle: "Inserir texto", url: "" },
+  { label: "Instagram", handle: "Inserir texto 128", url: "" },
+  { label: "E-mail", handle: "Inserir texto 129", url: "" },
+  { label: "WhatsApp", handle: "Inserir texto 130", url: "" },
 ];
 
 /** Link do botão PARTICIPE. Vazio = leva à página de contato. */

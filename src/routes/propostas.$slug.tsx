@@ -20,6 +20,8 @@ export const Route = createFileRoute("/propostas/$slug")({
         { name: "description", content: desc },
         { property: "og:title", content: `${name} — Chapa Abaporu` },
         { property: "og:description", content: desc },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       ],
     };
   },
@@ -35,7 +37,7 @@ function CategoryPage() {
       <section className="bg-brand-cream texture-paper">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
           <p className="mb-8 rounded-xl border-2 border-dashed border-brand-red/50 bg-brand-paper px-4 py-3 text-sm text-brand-red">
-            Inserir texto
+            Inserir texto 135
           </p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {c.proposals.map((p) => <ProposalCard key={p.title} p={p} category={c} />)}
@@ -52,7 +54,7 @@ function CategoryPage() {
       <section className="border-t-4 border-brand-green bg-brand-paper">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <h2 className="text-4xl text-brand-green">Inserir texto</h2>
+            <h2 className="text-4xl text-brand-green">Inserir texto 136</h2>
             <Link to="/" className="inline-flex items-center gap-2 font-display uppercase text-brand-red"><ArrowLeft className="size-4" /> Voltar ao início</Link>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
