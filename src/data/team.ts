@@ -15,12 +15,17 @@ export type TeamMember = {
 
 /** Cada campo provisório tem um número próprio para busca e edição manual. */
 export const team: TeamMember[] = [
-  { id: "integrante-1", name: "Inserir texto 12", role: "Coordenação Geral", bio: "Inserir texto 13", photo: "", links: [] },
-  { id: "integrante-2", name: "Inserir texto 14", role: "Secretaria de Comunicação", bio: "Inserir texto 15", photo: "", links: [] },
-  { id: "integrante-3", name: "Inserir texto 16", role: "Secretaria de Relações Institucionais", bio: "Inserir texto 17", photo: "", links: [] },
-  { id: "integrante-4", name: "Inserir texto 18", role: "Secretaria de Extensão e Pesquisa", bio: "Inserir texto 19", photo: "", links: [] },
-  { id: "integrante-5", name: "Inserir texto 20", role: "Tesouraria", bio: "Inserir texto 21", photo: "", links: [] },
-  { id: "integrante-6", name: "Inserir texto 22", role: "Secretaria Geral", bio: "Inserir texto 23", photo: "", links: [] },
-  { id: "integrante-7", name: "Inserir texto 24", role: "Suplência", bio: "Inserir texto 25", photo: "", links: [] },
-  { id: "integrante-8", name: "Inserir texto 26", role: "Suplência", bio: "Inserir texto 27", photo: "", links: [] },
+  { id: "integrante-1", name: "Júlio César", role: "Presidente", bio: "Inserir texto 13", photo: "", links: [] },
+  { id: "integrante-2", name: "Júlia Francinni", role: "Vice-Presidente", bio: "Inserir texto 15", photo: "", links: [] },
+  { id: "integrante-3", name: "Beatriz Madureira", role: "Primeira Tesoureira", bio: "Inserir texto 17", photo: "", links: [] },
+  { id: "integrante-4", name: "Vitor Rosa", role: "Segundo Tesoureiro", bio: "Inserir texto 19", photo: "", links: [] },
+  { id: "integrante-5", name: "Luísa Gonçalves", role: "Primeira Secretária", bio: "Inserir texto 21", photo: "", links: [] },
+  { id: "integrante-6", name: "Ana Carolina Delgado", role: "Segunda Secretária", bio: "Inserir texto 23", photo: "", links: [] },
+  { id: "integrante-7", name: "Rafael Borges", role: "Diretor de Comunicação", bio: "Inserir texto 25", photo: "", links: [] },
+  { id: "integrante-8", name: "Jéssica Gonçalves", role: "Diretora adjunta de Comunicação", bio: "Inserir texto 27", photo: "", links: [] },
+  { id: "integrante-9", name: "Ana Clara Carvalho", role: "Diretora de Pesquisa e Extensão", bio: "Inserir texto 164", photo: "", links: [] },
+  { id: "integrante-10", name: "Anne Alcantra", role: "Diretora adjunta de Pesquisa e Extensão", bio: "Inserir texto 165", photo: "", links: [] },
+  { id: "integrante-11", name: "Zoe Ribas", role: "Diretora de Relações Institucionais", bio: "Inserir texto 166", photo: "", links: [] },
+  { id: "integrante-12", name: "Júlia Mendes", role: "Diretora adjunta de Relações Institucionais", bio: "Inserir texto 167", photo: "", links: [] },
+  { id: "integrante-13", name: "Sara Gonçalves", role: "Inserir texto 168", bio: "Inserir texto 169", photo: "", links: [] },
 ];
