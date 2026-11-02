@@ -113,7 +113,7 @@
     box-shadow: 4px 4px 0 var(--brand-ink);
     transition: transform .15s ease, box-shadow .15s ease;
   }
-  .btn-sun:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--brand-ink); }
+  .btn-sun:hover { background: var(--brand-mustard); transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--brand-ink); }
   .btn-outline-cream {
     display: inline-flex; align-items: center; gap: .6rem;
     border: 2px solid var(--brand-paper); color: var(--brand-paper);

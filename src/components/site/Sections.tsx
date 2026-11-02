@@ -102,7 +102,7 @@ export function PageHero({ title, text, tone = "red" }: { title: string; text?: 
   };
   return (
     <section className={`relative overflow-hidden texture-print ${map[tone]}`}>
-      <Sun className="pointer-events-none absolute -right-8 -top-8 size-40 opacity-90" />
+      <Sun className="pointer-events-none absolute -right-8 -top-8 size-24 opacity-90 md:size-40" />
       <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-20">
         <h1 className="text-6xl md:text-8xl">{title}</h1>
         {text && <p className="mt-5 max-w-2xl text-lg opacity-90">{text}</p>}
