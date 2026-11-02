@@ -8,11 +8,13 @@ export const Route = createFileRoute("/equipe")({
       { name: "description", content: "Conheça os integrantes da Chapa Abaporu e seus cargos na gestão do CACE." },
       { property: "og:title", content: "Nossa Equipe — Chapa Abaporu" },
       { property: "og:description", content: "Conheça os integrantes da Chapa Abaporu." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: () => (
     <>
-      <PageHero title="Inserir texto" text="Inserir texto" tone="green" />
+      <PageHero title="Inserir texto 131" text="Inserir texto 132" tone="green" />
       <TeamSection withHeading={false} />
     </>
   ),

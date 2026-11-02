@@ -10,11 +10,13 @@ export const Route = createFileRoute("/propostas/")({
       { name: "description", content: "Propostas da Chapa Abaporu em Comunicação, Relações Institucionais, Extensão e Pesquisa e Tesouraria." },
       { property: "og:title", content: "Propostas — Chapa Abaporu" },
       { property: "og:description", content: "Conheça as propostas por secretaria." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: () => (
     <>
-      <PageHero title="Inserir texto" text="Inserir texto" tone="blue" />
+      <PageHero title="Inserir texto 133" text="Inserir texto 134" tone="blue" />
       <section className="bg-brand-cream texture-paper">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 py-16 sm:grid-cols-2 md:px-6 lg:grid-cols-4">
           {categories.map((c) => <CategoryCard key={c.slug} c={c} />)}
