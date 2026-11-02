@@ -8,7 +8,7 @@ import logoAbaporu from "@/assets/logo-abaporu.png";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-brand-blue texture-print">
+    <section className="relative overflow-hidden bg-brand-green texture-print">
       <Blob className="pointer-events-none absolute -left-24 bottom-0 size-80 text-brand-green/60" />
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:px-6 lg:grid-cols-2 lg:py-24">
         <div>
@@ -16,7 +16,7 @@ export function Hero() {
           <h1 className="mt-4 text-6xl text-brand-paper sm:text-7xl xl:text-8xl">
             CHAPA ABAPORU
           </h1>
-          <p className="mt-6 max-w-md text-lg text-brand-paper/90">Pensar a Ciências do Estado a partir de nós</p>
+          <p className="mt-6 max-w-md text-lg text-brand-paper/90">Romper para Reconstruir</p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link to="/" hash="propostas" className="btn-sun">Conheça as propostas <ArrowRight className="size-4" /></Link>
             <Link to="/quem-somos" className="btn-outline-cream">Quem somos</Link>
@@ -39,15 +39,15 @@ export function AboutSection() {
     <section className="relative overflow-hidden bg-brand-cream texture-paper">
       <div className="relative mx-auto grid max-w-5xl gap-12 px-4 py-20 md:px-6 lg:grid-cols-2">
         <div>
-          <h2 className="text-5xl text-brand-red">Inserir texto 4</h2>
+          <h2 className="text-5xl text-brand-red">CIÊNCIAS DO ESTADO MERECE MAIS.</h2>
           <p className="mt-5 leading-relaxed text-brand-green">
-            Inserir texto 5
+            Um curso com identidade, potencial e muito a oferecer, mas que ainda enfrenta desafios de visibilidade, integração e reconhecimento. Acreditamos que fortalecer Ciências do Estado começa por reconhecer sua importância e dar protagonismo a quem o constrói todos os dias: seus estudantes.
           </p>
         </div>
         <div>
-          <h2 className="text-5xl text-brand-green">Inserir texto 6</h2>
+          <h2 className="text-5xl text-brand-green">UM CACE PRESENTE E PARTICIPATIVO.</h2>
           <p className="mt-5 leading-relaxed text-brand-green">
-            Inserir texto 7
+            Queremos um Centro Acadêmico que vá além da representação formal: que escute, acolha, articule e transforme demandas em ações. Um espaço construído coletivamente, comprometido com a formação, a integração e o fortalecimento do nosso curso.
           </p>
           <Link to="/quem-somos" className="btn-red mt-8">Saiba mais <ArrowRight className="size-4" /></Link>
         </div>
@@ -75,16 +75,16 @@ export function TeamSection({ withHeading = true }: { withHeading?: boolean }) {
 
 export function ProposalsSection() {
   return (
-    <section id="propostas" className="relative scroll-mt-20 overflow-hidden bg-brand-blue texture-print">
+    <section id="propostas" className="relative scroll-mt-20 overflow-hidden bg-brand-red texture-print">
       <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <h2 className="text-5xl text-brand-paper md:text-6xl">Inserir <span className="text-brand-yellow">texto 10</span></h2>
-            <p className="mt-4 max-w-xl text-brand-paper/90">Inserir texto 11</p>
+            <h2 className="text-5xl text-brand-paper md:text-6xl">Conheça nossas <span className="text-brand-yellow">propostas</span></h2>
+            <p className="mt-4 max-w-xl text-brand-paper/90">Nossas propostas buscam construir um CACE mais ativo, participativo e próximo dos estudantes. Conheça as iniciativas que planejamos para fortalecer nosso curso, ampliar a participação estudantil e transformar nossa vivência acadêmica.</p>
           </div>
           <Sun className="size-20" />
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {categories.map((c) => <CategoryCard key={c.slug} c={c} />)}
         </div>
       </div>
@@ -92,10 +92,11 @@ export function ProposalsSection() {
   );
 }
 
-export function PageHero({ title, text, tone = "red" }: { title: string; text?: string; tone?: "red" | "blue" | "green" | "yellow" }) {
+export function PageHero({ title, text, tone = "red" }: { title: string; text?: string; tone?: "red" | "terracotta" | "green" | "yellow" | "coral" }) {
   const map = {
     red: "bg-brand-red text-brand-paper",
-    blue: "bg-brand-blue text-brand-paper",
+    terracotta: "bg-brand-terracotta text-brand-ink",
+    coral: "bg-brand-coral text-brand-ink",
     green: "bg-brand-green text-brand-paper",
     yellow: "bg-brand-yellow text-brand-green",
   };

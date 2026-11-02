@@ -7,7 +7,7 @@ export const Route = createFileRoute("/propostas/")({
   head: () => ({
     meta: [
       { title: "Propostas — Chapa Abaporu" },
-      { name: "description", content: "Propostas da Chapa Abaporu em Comunicação, Relações Institucionais, Extensão e Pesquisa e Tesouraria." },
+      { name: "description", content: "Propostas da Chapa Abaporu em DIREX, Comunicação, Relações Institucionais, Extensão e Pesquisa e Tesouraria." },
       { property: "og:title", content: "Propostas — Chapa Abaporu" },
       { property: "og:description", content: "Conheça as propostas por secretaria." },
       { property: "og:type", content: "website" },
@@ -16,9 +16,9 @@ export const Route = createFileRoute("/propostas/")({
   }),
   component: () => (
     <>
-      <PageHero title="Inserir texto 133" text="Inserir texto 134" tone="blue" />
+      <PageHero title="Nossas propostas" text="Nossas propostas buscam construir um CACE mais ativo, participativo e próximo dos estudantes. Conheça as iniciativas que planejamos para fortalecer nosso curso, ampliar a participação estudantil e transformar nossa vivência acadêmica." tone="green" />
       <section className="bg-brand-cream texture-paper">
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 py-16 sm:grid-cols-2 md:px-6 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 py-16 sm:grid-cols-2 md:px-6 lg:grid-cols-5">
           {categories.map((c) => <CategoryCard key={c.slug} c={c} />)}
         </div>
       </section>

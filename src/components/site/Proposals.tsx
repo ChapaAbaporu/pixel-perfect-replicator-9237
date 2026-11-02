@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight, BookOpen, ChevronDown, Coins, Handshake, Megaphone } from "lucide-react";
+import { ArrowUpRight, BookOpen, ChevronDown, Coins, Handshake, Megaphone, Users } from "lucide-react";
 import { useState } from "react";
 import { toneClasses, type Category, type Proposal } from "@/data/proposals";
 
-export const icons = { megaphone: Megaphone, handshake: Handshake, book: BookOpen, coins: Coins };
+export const icons = { megaphone: Megaphone, handshake: Handshake, book: BookOpen, coins: Coins, users: Users };
 
 export function CategoryCard({ c }: { c: Category }) {
   const t = toneClasses[c.tone];
@@ -18,7 +18,7 @@ export function CategoryCard({ c }: { c: Category }) {
         <Icon className={`size-8 ${t.soft}`} aria-hidden="true" />
       </span>
       <h3 className="mt-6 text-3xl">{c.name}</h3>
-      <p className="mt-3 flex-1 text-sm opacity-90">{c.short}</p>
+      {c.short && <p className="mt-3 flex-1 text-sm opacity-90">{c.short}</p>}
       <span className={`mt-6 inline-flex items-center gap-2 font-display uppercase tracking-wider ${t.accent}`}>
         Ver propostas <ArrowUpRight className="size-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
       </span>

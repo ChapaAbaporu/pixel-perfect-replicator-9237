@@ -3,9 +3,9 @@
  * Canais sem url aparecem como "a definir".
  */
 export const contacts: { label: string; handle: string; url: string }[] = [
-  { label: "Instagram", handle: "Inserir texto 128", url: "" },
-  { label: "E-mail", handle: "Inserir texto 129", url: "" },
-  { label: "WhatsApp", handle: "Inserir texto 130", url: "" },
+  { label: "Instagram", handle: "@chapaabaporu", url: "https://www.instagram.com/chapaabaporu/" },
+  { label: "E-mail", handle: "abaporu.cace@gmail.com", url: "mailto:abaporu.cace@gmail.com" },
+  { label: "WhatsApp", handle: "XXXXX-XXXX", url: "" },
 ];
 
 /** Link do botão PARTICIPE. Vazio = leva à página de contato. */
@@ -21,6 +21,6 @@ export const navLinks = [
   { to: "/quem-somos", label: "Quem Somos" },
   { to: "/propostas", label: "Propostas" },
   { to: "/equipe", label: "Nossa Equipe" },
-  { to: "/noticias", label: "Notícias" },
+  { to: "/noticias", label: "Atas" },
   { to: "/contato", label: "Contato" },
 ] as const;

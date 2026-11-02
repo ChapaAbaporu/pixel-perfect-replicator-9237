@@ -18,12 +18,12 @@ export const Route = createFileRoute("/contato")({
 });
 
 const iconFor = (label: string) => (label === "Instagram" ? Instagram : label === "E-mail" ? AtSign : MessageCircle);
-const tones = ["bg-brand-red text-brand-paper", "bg-brand-blue text-brand-paper", "bg-brand-yellow text-brand-green"];
+const tones = ["bg-brand-red text-brand-paper", "bg-brand-coral text-brand-ink", "bg-brand-yellow text-brand-green"];
 
 function Contato() {
   return (
     <>
-      <PageHero title="Inserir texto 157" text="Inserir texto 158" tone="yellow" />
+      <PageHero title="Nossos Contatos" text="Nossa chapa se constrói coletivamente! Entre em contato conosco para compartilhar sugestões, críticas, opiniões ou declarações de apoio. Sua participação é importante para mantermos um diálogo aberto e aproximar cada vez mais o CACE dos estudantes." tone="yellow" />
       <section className="bg-brand-cream texture-paper">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
           <h2 className="text-5xl text-brand-green">Inserir texto 159</h2>
@@ -34,7 +34,7 @@ function Contato() {
                 <>
                   <Icon className="size-10" />
                   <h3 className="mt-6 text-3xl">{c.label}</h3>
-                  <p className="mt-2 opacity-85">{c.url ? c.handle : "Canal oficial a definir"}</p>
+                  <p className="mt-2 opacity-85">{c.handle}</p>
                 </>
               );
               return c.url ? (
@@ -45,8 +45,7 @@ function Contato() {
             })}
           </div>
           <div className="mt-16 rounded-2xl bg-brand-green p-10 text-brand-paper card-pop">
-            <h2 className="text-5xl text-brand-yellow">Inserir texto 160</h2>
-            <p className="mt-4 max-w-2xl text-lg">Inserir texto 161</p>
+            <p className="max-w-2xl text-lg">Sinta-se à vontade para conversar pessoalmente com qualquer membro da nossa chapa! Estamos disponíveis para apresentar nossas propostas, esclarecer dúvidas e ouvir suas opiniões. Será um prazer trocar ideias e conhecer melhor as demandas dos estudantes.</p>
           </div>
         </div>
       </section>
