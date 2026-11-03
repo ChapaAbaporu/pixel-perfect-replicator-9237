@@ -96,8 +96,8 @@ export function PageHero({ title, text, tone = "red" }: { title: string; text?: 
   const map = {
     blue: "bg-brand-blue text-brand-paper",
     red: "bg-brand-red text-brand-paper",
-    terracotta: "bg-brand-terracotta text-brand-ink",
-    coral: "bg-brand-coral text-brand-ink",
+    terracotta: "bg-brand-green text-brand-paper",
+    coral: "bg-brand-blue text-brand-paper",
     green: "bg-brand-green text-brand-paper",
     yellow: "bg-brand-yellow text-brand-green",
   };

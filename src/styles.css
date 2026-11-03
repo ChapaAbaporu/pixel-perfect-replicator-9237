@@ -58,10 +58,10 @@
   --brand-cream: #E0D4BE;
   --brand-paper: var(--brand-cream);
   --brand-ink: color-mix(in oklab, var(--brand-green) 40%, black);
-  --brand-coral: #E4594C;
+  --brand-coral: var(--brand-blue);
   --brand-mustard: var(--brand-yellow);
   --brand-sage: #6F7E53;
-  --brand-terracotta: #A35740;
+  --brand-terracotta: var(--brand-green);
 
   --background: var(--brand-cream);
   --foreground: var(--brand-ink);

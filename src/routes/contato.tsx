@@ -18,7 +18,7 @@ export const Route = createFileRoute("/contato")({
 });
 
 const iconFor = (label: string) => (label === "Instagram" ? Instagram : label === "E-mail" ? AtSign : MessageCircle);
-const tones = ["bg-brand-red text-brand-paper", "bg-brand-coral text-brand-ink", "bg-brand-yellow text-brand-green"];
+const tones = ["bg-brand-red text-brand-paper", "bg-brand-blue text-brand-paper", "bg-brand-yellow text-brand-green"];
 
 function Contato() {
   return (
