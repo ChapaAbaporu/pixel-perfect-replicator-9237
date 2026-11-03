@@ -1,9 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight, BookOpen, ChevronDown, Coins, Handshake, Megaphone, Users } from "lucide-react";
+import { ArrowUpRight, BookOpen, ChevronDown, Coins, Handshake, Megaphone, Palette, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { toneClasses, type Category, type Proposal } from "@/data/proposals";
 
-export const icons = { megaphone: Megaphone, handshake: Handshake, book: BookOpen, coins: Coins, users: Users };
+export const icons = { megaphone: Megaphone, handshake: Handshake, book: BookOpen, coins: Coins, users: Users, palette: Palette };
 
 export function CategoryCard({ c }: { c: Category }) {
   const t = toneClasses[c.tone];
@@ -39,15 +40,15 @@ export function ProposalCard({ p, category }: { p: Proposal; category: Category 
           {p.status && <span className={`shrink-0 rounded-full px-3 py-1 text-xs font-bold ${t.bg} ${t.text}`}>{p.status}</span>}
         </div>
         <p className="mt-3 text-brand-green/85">{p.summary}</p>
-        <button
+        <Button variant="ghost"
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open}
           aria-controls={id}
-          className={`mt-4 inline-flex items-center gap-1 font-display uppercase tracking-wider ${category.tone === "yellow" ? "text-brand-red" : t.soft}`}
+          className={`mt-4 h-auto px-0 hover:bg-transparent inline-flex items-center gap-1 font-display uppercase tracking-wider ${category.tone === "yellow" ? "text-brand-red" : t.soft}`}
         >
           {open ? "Ver menos" : "Ver detalhes"}
           <ChevronDown className={`size-5 transition-transform ${open ? "rotate-180" : ""}`} />
-        </button>
+        </Button>
         {open && (
           <dl id={id} className="mt-4 space-y-4 border-t border-brand-green/20 pt-4 text-sm text-brand-green">
             <div><dt className="eyebrow text-brand-red">Problema identificado</dt><dd className="mt-1">{p.problem}</dd></div>

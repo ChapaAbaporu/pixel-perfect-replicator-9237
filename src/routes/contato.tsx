@@ -26,8 +26,7 @@ function Contato() {
       <PageHero title="Nossos Contatos" text="Nossa chapa se constrói coletivamente! Entre em contato conosco para compartilhar sugestões, críticas, opiniões ou declarações de apoio. Sua participação é importante para mantermos um diálogo aberto e aproximar cada vez mais o CACE dos estudantes." tone="yellow" />
       <section className="bg-brand-cream texture-paper">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
-          <h2 className="text-5xl text-brand-green">Inserir texto 159</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3">
             {contacts.map((c, i) => {
               const Icon = iconFor(c.label);
               const inner = (

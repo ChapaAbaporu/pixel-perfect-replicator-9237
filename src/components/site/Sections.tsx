@@ -3,12 +3,12 @@ import { ArrowRight } from "lucide-react";
 import { categories } from "@/data/proposals";
 import { CategoryCard } from "./Proposals";
 import { TeamCarousel } from "./TeamCarousel";
-import { Blob, Sun } from "./Decor";
+import { Blob } from "./Decor";
 import logoAbaporu from "@/assets/logo-abaporu.png";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-brand-green texture-print">
+    <section className="relative overflow-hidden bg-brand-blue texture-print">
       <Blob className="pointer-events-none absolute -left-24 bottom-0 size-80 text-brand-green/60" />
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:px-6 lg:grid-cols-2 lg:py-24">
         <div>
@@ -59,7 +59,7 @@ export function AboutSection() {
 export function TeamSection({ withHeading = true }: { withHeading?: boolean }) {
   return (
     <section id="equipe" className="relative overflow-hidden border-t-4 border-brand-green bg-brand-cream texture-paper">
-      <Sun className="pointer-events-none absolute -right-12 top-8 size-36 opacity-70" />
+
       <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-6">
         {withHeading && (
           <>
@@ -82,9 +82,9 @@ export function ProposalsSection() {
             <h2 className="text-5xl text-brand-paper md:text-6xl">Conheça nossas <span className="text-brand-yellow">propostas</span></h2>
             <p className="mt-4 max-w-xl text-brand-paper/90">Nossas propostas buscam construir um CACE mais ativo, participativo e próximo dos estudantes. Conheça as iniciativas que planejamos para fortalecer nosso curso, ampliar a participação estudantil e transformar nossa vivência acadêmica.</p>
           </div>
-          <Sun className="size-20" />
+
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((c) => <CategoryCard key={c.slug} c={c} />)}
         </div>
       </div>
@@ -92,8 +92,9 @@ export function ProposalsSection() {
   );
 }
 
-export function PageHero({ title, text, tone = "red" }: { title: string; text?: string; tone?: "red" | "terracotta" | "green" | "yellow" | "coral" }) {
+export function PageHero({ title, text, tone = "red" }: { title: string; text?: string; tone?: "red" | "terracotta" | "green" | "yellow" | "coral" | "blue" }) {
   const map = {
+    blue: "bg-brand-blue text-brand-paper",
     red: "bg-brand-red text-brand-paper",
     terracotta: "bg-brand-terracotta text-brand-ink",
     coral: "bg-brand-coral text-brand-ink",
@@ -102,7 +103,7 @@ export function PageHero({ title, text, tone = "red" }: { title: string; text?: 
   };
   return (
     <section className={`relative overflow-hidden texture-print ${map[tone]}`}>
-      <Sun className="pointer-events-none absolute -right-8 -top-8 size-24 opacity-90 md:size-40" />
+
       <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-20">
         <h1 className="text-6xl md:text-8xl">{title}</h1>
         {text && <p className="mt-5 max-w-2xl text-lg opacity-90">{text}</p>}
