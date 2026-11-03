@@ -1,5 +1,10 @@
 # Roadmap
 
+- [ ] Aplicar nova paleta modernista enviada e retirar sóis decorativos
+- [ ] Incluir Cultura e membros por departamento, mantendo membros adicionais fora do início
+- [ ] Atualizar descrições e títulos das propostas e remover espaços 135 e 159
+- [ ] Verificar páginas, perfis e navegação dos departamentos
+
 - [x] Aplicar paleta oficial enviada, preservando a estrutura e a arte da logo
 - [x] Atualizar textos, slogan, contatos e cargo de Sara
 - [x] Incluir DIREX clicável antes de Comunicação e remover resumos provisórios dos cards
