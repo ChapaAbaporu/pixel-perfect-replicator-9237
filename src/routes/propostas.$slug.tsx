@@ -3,6 +3,8 @@ import { ArrowLeft } from "lucide-react";
 import { PageHero } from "@/components/site/Sections";
 import { CategoryCard, ProposalCard } from "@/components/site/Proposals";
 import { Placeholder } from "@/components/site/Placeholder";
+import { TeamCarousel } from "@/components/site/TeamCarousel";
+import { getDepartmentMembers } from "@/data/team";
 import { categories, getCategory } from "@/data/proposals";
 
 export const Route = createFileRoute("/propostas/$slug")({
@@ -36,9 +38,6 @@ function CategoryPage() {
       <PageHero title={c.name} text={c.intro} tone={c.tone} />
       <section className="bg-brand-cream texture-paper">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
-          <p className="mb-8 rounded-xl border-2 border-dashed border-brand-red/50 bg-brand-paper px-4 py-3 text-sm text-brand-red">
-            Inserir texto 135
-          </p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {c.proposals.map((p) => <ProposalCard key={p.title} p={p} category={c} />)}
           </div>
@@ -51,10 +50,16 @@ function CategoryPage() {
           </div>
         </div>
       </section>
+      <section className="bg-brand-cream texture-paper" aria-labelledby="department-members">
+        <div className="mx-auto max-w-7xl px-4 pb-16 md:px-6">
+          <h2 id="department-members" className="mb-8 text-4xl text-brand-red">Membros de {c.name}</h2>
+          <TeamCarousel members={getDepartmentMembers(c.slug)} />
+        </div>
+      </section>
       <section className="border-t-4 border-brand-green bg-brand-paper">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <h2 className="text-4xl text-brand-green">Inserir texto 136</h2>
+            <h2 className="text-4xl text-brand-green">Confira as outras propostas</h2>
             <Link to="/" className="inline-flex items-center gap-2 font-display uppercase text-brand-red"><ArrowLeft className="size-4" /> Voltar ao início</Link>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-3">

@@ -35,7 +35,7 @@ function Participate({ onClick }: { onClick?: () => void }) {
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 bg-brand-red texture-print">
+    <header className="sticky top-0 z-40 bg-brand-blue texture-print">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
         <Link to="/" aria-label="Chapa Abaporu — início">
           <Logo />

@@ -29,3 +29,28 @@ export const team: TeamMember[] = [
   { id: "integrante-12", name: "Júlia Mendes", role: "Diretora adjunta de Relações Institucionais", bio: "Inserir texto 167", photo: "", links: [] },
   { id: "integrante-13", name: "Sara Gonçalves", role: "Diretora de Cultura", bio: "Inserir texto 169", photo: "", links: [] },
 ];
+
+/** Integrantes exclusivos dos departamentos; não entram no carrossel inicial. */
+export const departmentOnlyMembers: TeamMember[] = [
+  { id: "alice-teles", name: "Alice Teles", role: "Membro DCOM", bio: "Inserir texto 180", photo: "", links: [] },
+  { id: "lucca-castro", name: "Lucca Castro", role: "Membro DEPE", bio: "Inserir texto 181", photo: "", links: [] },
+  { id: "guilherme-riedel", name: "Guilherme Riedel", role: "Membro DRIS", bio: "Inserir texto 182", photo: "", links: [] },
+];
+
+/** Referências explícitas mantêm os perfis oficiais compartilhados. */
+const departmentMemberIds: Record<string, string[]> = {
+  direx: ["integrante-1", "integrante-2", "integrante-5", "integrante-6"],
+  tesouraria: ["integrante-3", "integrante-4"],
+  comunicacao: ["integrante-7", "integrante-8", "alice-teles"],
+  "extensao-e-pesquisa": ["integrante-9", "integrante-10", "lucca-castro"],
+  "relacoes-institucionais": ["integrante-11", "integrante-12", "guilherme-riedel"],
+  cultura: ["integrante-13"],
+};
+
+export function getDepartmentMembers(slug: string): TeamMember[] {
+  const allMembers = [...team, ...departmentOnlyMembers];
+  return (departmentMemberIds[slug] ?? []).flatMap((id) => {
+    const member = allMembers.find((candidate) => candidate.id === id);
+    return member ? [member] : [];
+  });
+}

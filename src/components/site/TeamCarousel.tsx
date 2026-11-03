@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight, Plus } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { team, type TeamMember } from "@/data/team";
+import { Button } from "@/components/ui/button";
 import { MemberModal } from "./MemberModal";
 import { Placeholder } from "./Placeholder";
 
@@ -65,12 +66,12 @@ export function TeamCarousel({ members = team }: { members?: TeamMember[] }) {
           className="no-scrollbar flex cursor-grab snap-x snap-mandatory gap-6 overflow-x-auto px-1 pb-6 pt-2 select-none active:cursor-grabbing"
         >
           {members.map((m, i) => (
-            <button
+            <Button variant="ghost"
               key={m.id}
               type="button"
               onClick={() => { if (!drag.current.moved) setSelected(m); }}
               aria-label={`Ver perfil de ${m.name}`}
-              className={`group w-[78%] shrink-0 snap-start rounded-2xl p-3 text-left card-pop transition-transform hover:-translate-y-1 sm:w-[46%] lg:w-[calc(25%-18px)] ${tones[i % tones.length]}`}
+              className={`group h-auto block whitespace-normal w-[78%] shrink-0 snap-start rounded-2xl p-3 text-left card-pop transition-transform hover:-translate-y-1 sm:w-[46%] lg:w-[calc(25%-18px)] ${tones[i % tones.length]}`}
             >
               {m.photo ? (
                 <img src={m.photo} alt="" draggable={false} className="aspect-[3/4] w-full rounded-xl object-cover" />
@@ -86,30 +87,30 @@ export function TeamCarousel({ members = team }: { members?: TeamMember[] }) {
                   <Plus className="size-5" />
                 </span>
               </div>
-            </button>
+            </Button>
           ))}
         </div>
       </div>
       <div className="mt-4 flex items-center justify-between gap-4">
         <div className="flex flex-wrap gap-2" role="tablist" aria-label="Posição no carrossel">
           {members.map((m, i) => (
-            <button
+            <Button variant="ghost"
               key={m.id}
               role="tab"
               aria-selected={active === i}
               aria-label={`Ir para ${m.name}`}
               onClick={() => goTo(i)}
-              className={`h-3 rounded-full transition-all ${active === i ? "w-8 bg-brand-red" : "w-3 bg-brand-green/30"}`}
+              className={`h-3 p-0 rounded-full transition-all ${active === i ? "w-8 bg-brand-red" : "w-3 bg-brand-green/30"}`}
             />
           ))}
         </div>
         <div className="flex gap-3">
-          <button onClick={() => scrollBy(-1)} aria-label="Anterior" className="grid size-12 place-items-center rounded-full bg-brand-green text-brand-paper hover:bg-brand-red">
+          <Button variant="ghost" onClick={() => scrollBy(-1)} aria-label="Anterior" className="grid p-0 size-12 place-items-center rounded-full bg-brand-green text-brand-paper hover:bg-brand-red">
             <ArrowLeft />
-          </button>
-          <button onClick={() => scrollBy(1)} aria-label="Próximo" className="grid size-12 place-items-center rounded-full bg-brand-green text-brand-paper hover:bg-brand-red">
+          </Button>
+          <Button variant="ghost" onClick={() => scrollBy(1)} aria-label="Próximo" className="grid p-0 size-12 place-items-center rounded-full bg-brand-green text-brand-paper hover:bg-brand-red">
             <ArrowRight />
-          </button>
+          </Button>
         </div>
       </div>
       <MemberModal member={selected} onClose={close} />

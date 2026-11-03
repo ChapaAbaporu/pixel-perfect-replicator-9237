@@ -2,12 +2,12 @@ import { Link } from "@tanstack/react-router";
 import { categories } from "@/data/proposals";
 import { contacts, navLinks } from "@/data/site";
 import { Logo } from "./SiteHeader";
-import { Sun, Cactus } from "./Decor";
+import { Cactus } from "./Decor";
 
 export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-brand-green text-brand-paper texture-print">
-      <Sun className="pointer-events-none absolute -right-10 -top-10 size-48 opacity-90" />
+
       <Cactus className="pointer-events-none absolute bottom-0 left-4 h-40 opacity-30 [&_g]:fill-brand-paper" />
       <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-6">
         <h2 className="max-w-2xl text-5xl text-brand-yellow md:text-6xl">Explore</h2>
