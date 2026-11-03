@@ -246,8 +246,8 @@ export const getCategory = (slug: string) => categories.find((c) => c.slug === s
 export const toneClasses: Record<CategoryTone, { bg: string; text: string; accent: string; soft: string }> = {
   blue: { bg: "bg-brand-blue", text: "text-brand-paper", accent: "text-brand-yellow", soft: "text-brand-blue" },
   red: { bg: "bg-brand-red", text: "text-brand-paper", accent: "text-brand-paper", soft: "text-brand-red" },
-  terracotta: { bg: "bg-brand-terracotta", text: "text-brand-ink", accent: "text-brand-ink", soft: "text-brand-red" },
-  coral: { bg: "bg-brand-coral", text: "text-brand-ink", accent: "text-brand-ink", soft: "text-brand-red" },
+  terracotta: { bg: "bg-brand-green", text: "text-brand-paper", accent: "text-brand-yellow", soft: "text-brand-green" },
+  coral: { bg: "bg-brand-blue", text: "text-brand-paper", accent: "text-brand-yellow", soft: "text-brand-blue" },
   green: { bg: "bg-brand-green", text: "text-brand-paper", accent: "text-brand-yellow", soft: "text-brand-green" },
   yellow: { bg: "bg-brand-yellow", text: "text-brand-green", accent: "text-brand-red", soft: "text-brand-green" },
 };

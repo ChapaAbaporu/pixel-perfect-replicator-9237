@@ -7,7 +7,7 @@ import { Placeholder } from "./Placeholder";
 
 const tones = [
   "bg-brand-red text-brand-paper",
-  "bg-brand-coral text-brand-ink",
+  "bg-brand-blue text-brand-paper",
   "bg-brand-green text-brand-paper",
   "bg-brand-yellow text-brand-green",
 ];
