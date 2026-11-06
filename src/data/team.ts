@@ -4,7 +4,14 @@
  * Para adicionar alguém, basta incluir um novo objeto nesta lista.
  * `photo`: caminho/URL da fotografia (retrato vertical). Deixe vazio para exibir o placeholder.
  */
-import julioPhoto from "@/assets/julio-cesar.png.asset.json";
+import julioPhoto from "@/assets/julio-cesar-foto.jpeg.asset.json";
+import juliaFrancinniPhoto from "@/assets/julia-francinni.jpeg.asset.json";
+import beatrizPhoto from "@/assets/beatriz-madureira.jpeg.asset.json";
+import luisaPhoto from "@/assets/luisa-goncalves.jpeg.asset.json";
+import anaCarolinaPhoto from "@/assets/ana-carolina-delgado.jpeg.asset.json";
+import rafaelPhoto from "@/assets/rafael-borges.jpeg.asset.json";
+import juliaMendesPhoto from "@/assets/julia-mendes.jpeg.asset.json";
+import saraPhoto from "@/assets/sara-goncalves.jpeg.asset.json";
 
 export type TeamMember = {
   id: string;
@@ -18,18 +25,18 @@ export type TeamMember = {
 /** Cada campo provisório tem um número próprio para busca e edição manual. */
 export const team: TeamMember[] = [
   { id: "integrante-1", name: "Júlio César", role: "Presidente", bio: "Caio Júlio César foi um patrício, líder militar e político romano. Desempenhou um papel crítico na transformação da República Romana no Império Romano.", photo: julioPhoto.url, links: [] },
-  { id: "integrante-2", name: "Júlia Francinni", role: "Vice-Presidente", bio: "Inserir texto 15", photo: "", links: [] },
-  { id: "integrante-3", name: "Beatriz Madureira", role: "Primeira Tesoureira", bio: "Inserir texto 17", photo: "", links: [] },
+  { id: "integrante-2", name: "Júlia Francinni", role: "Vice-Presidente", bio: "Inserir texto 15", photo: juliaFrancinniPhoto.url, links: [] },
+  { id: "integrante-3", name: "Beatriz Madureira", role: "Primeira Tesoureira", bio: "Inserir texto 17", photo: beatrizPhoto.url, links: [] },
   { id: "integrante-4", name: "Vitor Rosa", role: "Segundo Tesoureiro", bio: "Inserir texto 19", photo: "", links: [] },
-  { id: "integrante-5", name: "Luísa Gonçalves", role: "Primeira Secretária", bio: "Inserir texto 21", photo: "", links: [] },
-  { id: "integrante-6", name: "Ana Carolina Delgado", role: "Segunda Secretária", bio: "Inserir texto 23", photo: "", links: [] },
-  { id: "integrante-7", name: "Rafael Borges", role: "Diretor de Comunicação", bio: "Inserir texto 25", photo: "", links: [] },
+  { id: "integrante-5", name: "Luísa Gonçalves", role: "Primeira Secretária", bio: "Inserir texto 21", photo: luisaPhoto.url, links: [] },
+  { id: "integrante-6", name: "Ana Carolina Delgado", role: "Segunda Secretária", bio: "Inserir texto 23", photo: anaCarolinaPhoto.url, links: [] },
+  { id: "integrante-7", name: "Rafael Borges", role: "Diretor de Comunicação", bio: "Inserir texto 25", photo: rafaelPhoto.url, links: [] },
   { id: "integrante-8", name: "Jéssica Gonçalves", role: "Diretora adjunta de Comunicação", bio: "Inserir texto 27", photo: "", links: [] },
   { id: "integrante-9", name: "Ana Clara Carvalho", role: "Diretora de Pesquisa e Extensão", bio: "Inserir texto 164", photo: "", links: [] },
   { id: "integrante-10", name: "Anne Alcantra", role: "Diretora adjunta de Pesquisa e Extensão", bio: "Inserir texto 165", photo: "", links: [] },
   { id: "integrante-11", name: "Zoe Ribas", role: "Diretora de Relações Institucionais", bio: "Inserir texto 166", photo: "", links: [] },
-  { id: "integrante-12", name: "Júlia Mendes", role: "Diretora adjunta de Relações Institucionais", bio: "Inserir texto 167", photo: "", links: [] },
-  { id: "integrante-13", name: "Sara Gonçalves", role: "Diretora de Cultura", bio: "Inserir texto 169", photo: "", links: [] },
+  { id: "integrante-12", name: "Júlia Mendes", role: "Diretora adjunta de Relações Institucionais", bio: "Inserir texto 167", photo: juliaMendesPhoto.url, links: [] },
+  { id: "integrante-13", name: "Sara Gonçalves", role: "Diretora de Cultura", bio: "Inserir texto 169", photo: saraPhoto.url, links: [] },
   { id: "miguel-angelo", name: "Miguel Angelo", role: "Diretor Adjunto de Cultura", bio: "Inserir texto 203", photo: "", links: [] },
 ];
 
