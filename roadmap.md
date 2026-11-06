@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Adicionar a foto e descrição enviadas ao perfil de Júlio César e verificar sua exibição
+
 - [x] Vincular as seis atas enviadas, na ordem 1–6, com as datas indicadas e cartões clicáveis
 - [x] Adicionar Miguel Angelo à equipe e ao departamento de Cultura
 - [x] Incluir as 43 propostas listadas e nomenclaturas do documento de atualização, preservando a identidade visual
