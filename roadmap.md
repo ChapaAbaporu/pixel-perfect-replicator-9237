@@ -1,9 +1,9 @@
 # Roadmap
 
-- [ ] Vincular as seis atas enviadas, na ordem 1–6, com as datas indicadas e cartões clicáveis
-- [ ] Adicionar Miguel Angelo à equipe e ao departamento de Cultura
-- [ ] Incluir as propostas e nomenclaturas do documento de atualização, preservando a identidade visual
-- [ ] Verificar links dos PDFs, propostas e perfil de Miguel Angelo
+- [x] Vincular as seis atas enviadas, na ordem 1–6, com as datas indicadas e cartões clicáveis
+- [x] Adicionar Miguel Angelo à equipe e ao departamento de Cultura
+- [x] Incluir as 43 propostas listadas e nomenclaturas do documento de atualização, preservando a identidade visual
+- [x] Verificar links dos PDFs, propostas e perfil de Miguel Angelo
 
 - [x] Aplicar nova paleta modernista enviada e retirar sóis decorativos
 - [x] Incluir Cultura e membros por departamento, mantendo membros adicionais fora do início
