@@ -14,6 +14,7 @@
 - Brand colors are semantic tokens in src/styles.css; never hardcode hex in components. The current official palette governs all interface colors, while the uploaded logo artwork remains unchanged.
 - The Atas page retains /noticias to preserve existing links; minutes only show a document link when a real URL is supplied.
 - Proposal categories, including DIREX and Cultura, share the dynamic proposal route so adding a category does not require duplicating page layout.
+- Proposal detail fields are optional; show expansion only for supplied details to preserve official title-and-summary entries without inventing content.
 
 - Keep placeholder fields as individually numbered literal strings, including each team member and proposal; shared content retains its identifier so searching finds the editable source.
 
