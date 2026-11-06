@@ -4,6 +4,8 @@
  * Para adicionar alguém, basta incluir um novo objeto nesta lista.
  * `photo`: caminho/URL da fotografia (retrato vertical). Deixe vazio para exibir o placeholder.
  */
+import julioPhoto from "@/assets/julio-cesar.png.asset.json";
+
 export type TeamMember = {
   id: string;
   name: string;
@@ -15,7 +17,7 @@ export type TeamMember = {
 
 /** Cada campo provisório tem um número próprio para busca e edição manual. */
 export const team: TeamMember[] = [
-  { id: "integrante-1", name: "Júlio César", role: "Presidente", bio: "Inserir texto 13", photo: "", links: [] },
+  { id: "integrante-1", name: "Júlio César", role: "Presidente", bio: "Caio Júlio César foi um patrício, líder militar e político romano. Desempenhou um papel crítico na transformação da República Romana no Império Romano.", photo: julioPhoto.url, links: [] },
   { id: "integrante-2", name: "Júlia Francinni", role: "Vice-Presidente", bio: "Inserir texto 15", photo: "", links: [] },
   { id: "integrante-3", name: "Beatriz Madureira", role: "Primeira Tesoureira", bio: "Inserir texto 17", photo: "", links: [] },
   { id: "integrante-4", name: "Vitor Rosa", role: "Segundo Tesoureiro", bio: "Inserir texto 19", photo: "", links: [] },
@@ -28,6 +30,7 @@ export const team: TeamMember[] = [
   { id: "integrante-11", name: "Zoe Ribas", role: "Diretora de Relações Institucionais", bio: "Inserir texto 166", photo: "", links: [] },
   { id: "integrante-12", name: "Júlia Mendes", role: "Diretora adjunta de Relações Institucionais", bio: "Inserir texto 167", photo: "", links: [] },
   { id: "integrante-13", name: "Sara Gonçalves", role: "Diretora de Cultura", bio: "Inserir texto 169", photo: "", links: [] },
+  { id: "miguel-angelo", name: "Miguel Angelo", role: "Diretor Adjunto de Cultura", bio: "Inserir texto 203", photo: "", links: [] },
 ];
 
 /** Integrantes exclusivos dos departamentos; não entram no carrossel inicial. */
@@ -44,7 +47,7 @@ const departmentMemberIds: Record<string, string[]> = {
   comunicacao: ["integrante-7", "integrante-8", "alice-teles"],
   "extensao-e-pesquisa": ["integrante-9", "integrante-10", "lucca-castro"],
   "relacoes-institucionais": ["integrante-11", "integrante-12", "guilherme-riedel"],
-  cultura: ["integrante-13"],
+  cultura: ["integrante-13", "miguel-angelo"],
 };
 
 export function getDepartmentMembers(slug: string): TeamMember[] {

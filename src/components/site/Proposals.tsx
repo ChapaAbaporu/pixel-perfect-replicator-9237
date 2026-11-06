@@ -31,6 +31,7 @@ export function ProposalCard({ p, category }: { p: Proposal; category: Category 
   const [open, setOpen] = useState(false);
   const t = toneClasses[category.tone];
   const id = `prop-${p.title.replace(/\W+/g, "-")}`;
+  const hasDetails = Boolean(p.problem || p.objective || p.actions?.length || p.result);
   return (
     <article className="rounded-2xl bg-brand-paper card-pop">
       <div className={`h-3 rounded-t-[0.9rem] ${t.bg}`} />
@@ -40,7 +41,7 @@ export function ProposalCard({ p, category }: { p: Proposal; category: Category 
           {p.status && <span className={`shrink-0 rounded-full px-3 py-1 text-xs font-bold ${t.bg} ${t.text}`}>{p.status}</span>}
         </div>
         <p className="mt-3 text-brand-green/85">{p.summary}</p>
-        <Button variant="ghost"
+        {hasDetails && <Button variant="ghost"
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open}
           aria-controls={id}
@@ -48,16 +49,16 @@ export function ProposalCard({ p, category }: { p: Proposal; category: Category 
         >
           {open ? "Ver menos" : "Ver detalhes"}
           <ChevronDown className={`size-5 transition-transform ${open ? "rotate-180" : ""}`} />
-        </Button>
-        {open && (
+        </Button>}
+        {hasDetails && open && (
           <dl id={id} className="mt-4 space-y-4 border-t border-brand-green/20 pt-4 text-sm text-brand-green">
-            <div><dt className="eyebrow text-brand-red">Problema identificado</dt><dd className="mt-1">{p.problem}</dd></div>
-            <div><dt className="eyebrow text-brand-red">Objetivo</dt><dd className="mt-1">{p.objective}</dd></div>
-            <div>
+            {p.problem && <div><dt className="eyebrow text-brand-red">Problema identificado</dt><dd className="mt-1">{p.problem}</dd></div>}
+            {p.objective && <div><dt className="eyebrow text-brand-red">Objetivo</dt><dd className="mt-1">{p.objective}</dd></div>}
+            {p.actions?.length ? <div>
               <dt className="eyebrow text-brand-red">Ações previstas</dt>
               <dd><ul className="mt-1 list-disc space-y-1 pl-5">{p.actions.map((a) => <li key={a}>{a}</li>)}</ul></dd>
-            </div>
-            <div><dt className="eyebrow text-brand-red">Resultado esperado</dt><dd className="mt-1">{p.result}</dd></div>
+            </div> : null}
+            {p.result && <div><dt className="eyebrow text-brand-red">Resultado esperado</dt><dd className="mt-1">{p.result}</dd></div>}
           </dl>
         )}
       </div>

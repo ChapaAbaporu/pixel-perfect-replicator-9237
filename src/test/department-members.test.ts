@@ -21,8 +21,9 @@ describe("Department membership", () => {
     const otherSlugs = ["direx", "tesouraria", "comunicacao", "extensao-e-pesquisa", "relacoes-institucionais", "cultura"].filter((other) => other !== slug);
     expect(otherSlugs.flatMap(getDepartmentMembers).some((member) => member.name === name)).toBe(false);
   });
-  it("provides Cultura and its confirmed director without inventing an adjunct", () => {
-    expect(getCategory("cultura")?.name).toBe("Cultura");
-    expect(getDepartmentMembers("cultura").map((m) => m.name)).toEqual(["Sara Gonçalves"]);
+  it("includes Sara and Miguel Angelo in Cultura and the homepage team", () => {
+    expect(getCategory("cultura")?.name).toBe("Cultura (DC)");
+    expect(getDepartmentMembers("cultura").map((m) => m.name)).toEqual(["Sara Gonçalves", "Miguel Angelo"]);
+    expect(team).toContainEqual(expect.objectContaining({ name: "Miguel Angelo", role: "Diretor Adjunto de Cultura", photo: "" }));
   });
 });
