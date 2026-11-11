@@ -19,3 +19,4 @@
 - Keep placeholder fields as individually numbered literal strings, including each team member and proposal; shared content retains its identifier so searching finds the editable source.
 
 - Department pages reuse TeamCarousel and explicit member-ID mappings from team data; department-only members stay separate from the homepage list to prevent unintended inclusion.
+- Retired category URLs redirect to the category that incorporates their content, preserving existing external links without retaining a separate department.
