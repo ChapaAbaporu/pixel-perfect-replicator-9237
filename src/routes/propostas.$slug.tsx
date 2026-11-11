@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { PageHero } from "@/components/site/Sections";
 import { CategoryCard, ProposalCard } from "@/components/site/Proposals";
@@ -9,6 +9,7 @@ import { categories, getCategory } from "@/data/proposals";
 
 export const Route = createFileRoute("/propostas/$slug")({
   loader: ({ params }) => {
+    if (params.slug === "tesouraria") throw redirect({ to: "/propostas/$slug", params: { slug: "direx" } });
     const category = getCategory(params.slug);
     if (!category) throw notFound();
     return { category };
