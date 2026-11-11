@@ -1,5 +1,9 @@
 # Roadmap
 
+- [ ] Integrar propostas e membros da Tesouraria à DIREX e reorganizar departamentos e equipe
+- [ ] Atualizar Lucca, Ana Clara, Miguel e Vitor conforme o documento e adicionar as duas novas fotos
+- [ ] Verificar fotos, perfis, ordem dos departamentos e preservação das propostas
+
 - [x] Adicionar a foto e descrição enviadas ao perfil de Júlio César e verificar sua exibição
 
 - [x] Vincular as seis atas enviadas, na ordem 1–6, com as datas indicadas e cartões clicáveis
