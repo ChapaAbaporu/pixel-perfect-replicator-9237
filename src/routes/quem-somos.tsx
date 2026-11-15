@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/Sections";
-import { Placeholder } from "@/components/site/Placeholder";
 import { Leaf } from "@/components/site/Decor";
 
 export const Route = createFileRoute("/quem-somos")({
@@ -51,10 +50,6 @@ function QuemSomos() {
                 </li>
               ))}
             </ul>
-          </div>
-          <h2 className="mt-20 text-5xl text-brand-red">Uma chapa em movimento</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3, 4, 5, 6].map((n) => <Placeholder key={n} label={`Foto de atividade ${n}`} className="aspect-[4/3] rounded-2xl" />)}
           </div>
         </div>
       </section>

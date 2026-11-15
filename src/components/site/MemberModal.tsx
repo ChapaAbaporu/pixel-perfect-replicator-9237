@@ -52,7 +52,7 @@ export function MemberModal({ member, onClose }: { member: TeamMember | null; on
             <p className="eyebrow text-brand-red">{member.role}</p>
             <h2 id="member-name" className="mt-2 text-4xl text-brand-green md:text-5xl">{member.name}</h2>
             <div className="my-5 h-1.5 w-20 rounded-full bg-brand-yellow" />
-            <p className="leading-relaxed text-brand-green/90">{member.bio}</p>
+            {member.bio && <p className="leading-relaxed text-brand-green/90">{member.bio}</p>}
             {member.links && member.links.length > 0 && (
               <ul className="mt-6 flex flex-wrap gap-3">
                 {member.links.map((l) => (

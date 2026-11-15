@@ -2,7 +2,6 @@ import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-route
 import { ArrowLeft } from "lucide-react";
 import { PageHero } from "@/components/site/Sections";
 import { CategoryCard, ProposalCard } from "@/components/site/Proposals";
-import { Placeholder } from "@/components/site/Placeholder";
 import { TeamCarousel } from "@/components/site/TeamCarousel";
 import { getDepartmentMembers } from "@/data/team";
 import { categories, getCategory } from "@/data/proposals";
@@ -41,13 +40,6 @@ function CategoryPage() {
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {c.proposals.map((p) => <ProposalCard key={p.title} p={p} category={c} />)}
-          </div>
-          <div className="mt-16 grid items-center gap-8 md:grid-cols-2">
-            <div>
-              <h2 className="text-4xl text-brand-green">{c.spaceTitle}</h2>
-              <p className="mt-3 text-brand-green/85">{c.spaceText}</p>
-            </div>
-            <Placeholder label={c.spaceTitle} className="aspect-video rounded-2xl" />
           </div>
         </div>
       </section>

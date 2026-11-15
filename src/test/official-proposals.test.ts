@@ -1,31 +1,32 @@
 import { describe, expect, it } from "vitest";
 import { categories, getCategory } from "@/data/proposals";
+import { contacts } from "@/data/site";
 
-describe("Proposals supplied from meeting 06/2026", () => {
+describe("Integral proposals update", () => {
   it.each([
-    ["cultura", "Cultura (DC)", 13, "Calendário Cultural Semestral"],
-    ["relacoes-institucionais", "Relações Institucionais (DRIS)", 7, "Ciências do Estado para Além da UFMG"],
-    ["comunicacao", "Comunicação (DCOM)", 10, "Divulgação de Ciências do Estado"],
-    ["extensao-e-pesquisa", "Pesquisa e Extensão (DEPE)", 8, "Formação Acadêmica Complementar"],
-  ])("includes the full supplied list for %s", (slug, name, count, firstTitle) => {
-    const category = getCategory(String(slug));
-    expect(category?.name).toBe(name);
-    expect(category?.proposals).toHaveLength(Number(count));
-    expect(category?.proposals[0]?.title).toBe(firstTitle);
-    expect(category?.proposals.every((proposal) => proposal.summary.length > 0 && !proposal.summary.startsWith("Inserir texto"))).toBe(true);
+    ["direx", "DIREX", 14, "União Institucional"],
+    ["cultura", "Cultura (DC)", 13, "Proposta 1"],
+    ["relacoes-institucionais", "Relações Institucionais e Sociais (DRIS)", 6, "Proposta 1"],
+    ["comunicacao", "Comunicação (DCOM)", 10, "Proposta 1"],
+    ["extensao-e-pesquisa", "Ensino, Pesquisa e Extensão (DEPE)", 8, "Proposta 1"],
+  ])("replaces the list for %s", (slug, name, count, firstTitle) => {
+    const c = getCategory(String(slug));
+    expect(c?.name).toBe(name);
+    expect(c?.proposals).toHaveLength(Number(count));
+    expect(c?.proposals[0]?.title).toBe(firstTitle);
+    expect(c?.proposals.every((p) => p.summary.length > 0 && !p.summary.startsWith("Inserir texto"))).toBe(true);
   });
-  it("preserves the existing DIREX content", () => {
-    expect(getCategory("direx")?.proposals[0]?.summary).toBe("Inserir texto 174");
-  });
-  it("integrates all five treasury proposals and responsibilities into DIREX", () => {
-    const direx = getCategory("direx");
-    expect(direx?.proposals).toHaveLength(6);
-    expect(direx?.proposals.slice(1).map((p) => p.title)).toEqual(["Clube CACE", "Fortalecimento do Butecace", "Diversificação dos Produtos do CACE", "Sebos e Bazares Permanentes", "Transparência e Organização Financeira"]);
-    expect(direx?.intro).toContain("Responsável pela administração financeira do CACE");
-    expect(direx?.spaceText).toContain("Inserir texto 43");
+  it("incorporates the five treasury proposals into DIREX", () => {
+    const direx = getCategory("direx")!;
+    expect(direx.proposals.filter((p) => p.title.startsWith("Tesouraria"))).toHaveLength(5);
     expect(getCategory("tesouraria")).toBeUndefined();
   });
-  it("presents DIREX followed by DEPE, DRIS, DCOM and DC", () => {
+  it("keeps the category order", () => {
     expect(categories.map((c) => c.slug)).toEqual(["direx", "extensao-e-pesquisa", "relacoes-institucionais", "comunicacao", "cultura"]);
+  });
+  it("uses the new WhatsApp number", () => {
+    const w = contacts.find((c) => c.label === "WhatsApp");
+    expect(w?.handle).toBe("+55 37 9181-5652");
+    expect(w?.url).toBe("https://wa.me/553791815652");
   });
 });
