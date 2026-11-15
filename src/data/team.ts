@@ -56,10 +56,10 @@ export const departmentOnlyMembers: TeamMember[] = [
 /** Referências explícitas mantêm os perfis oficiais compartilhados. */
 const departmentMemberIds: Record<string, string[]> = {
   direx: ["integrante-1", "integrante-2", "integrante-5", "integrante-6", "integrante-3", "integrante-4"],
-  { id: "geovana-silva", name: "Geovana Silva", role: "Diretora adjunta de Comunicação", bio: "Geovana Silva é graduanda em Ciências do Estado na UFMG e candidata a diretora adjunta do Departamento de Comunicação na chapa Abaporu. Integra o Departamento de Cultura na gestão atual do CACE, faz parte do corpo editorial da Revista de Ciências do Estado (REVICE) e é estagiária na Secretaria de Estado de Cultura e Turismo de Minas Gerais.", photo: geovanaPhoto.url, links: [] },
-  { id: "integrante-8", name: "Jéssica Gonçalves", role: "Diretora de Cultura", bio: "", photo: jessicaPhoto.url, links: [] },
-  { id: "integrante-10", name: "Anne Alcantra", role: "Diretora adjunta de Ensino, Pesquisa e Extensão", bio: "Graduanda em Ciências do Estado pela Universidade Federal de Minas Gerais (UFMG). Membro do Corpo Editorial da Revista de Ciências do Estado (Revice/UFMG) e extensionista do Laboratório de Tecnologias Públicas para o Setor Público (LABP²/UFMG). Monitora da disciplina Organização dos Poderes do Estado Brasileiro, vinculada ao Programa de Monitoria de Graduação do Departamento de Direito Público da Faculdade de Direito da UFMG e pesquisadora do projeto de pesquisa “Constitucionalismo Estrutural e Narrativa de Poder”.", photo: annePhoto.url, links: [] },
+  comunicacao: ["integrante-7", "geovana-silva", "alice-teles"],
+  "extensao-e-pesquisa": ["integrante-9", "integrante-10", "lucca-castro"],
   "relacoes-institucionais": ["integrante-11", "integrante-12", "guilherme-riedel"],
+  cultura: ["integrante-8", "miguel-angelo"],
 };
 
 export function getDepartmentMembers(slug: string): TeamMember[] {
