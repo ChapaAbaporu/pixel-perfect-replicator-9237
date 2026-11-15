@@ -5,7 +5,7 @@
 export const contacts: { label: string; handle: string; url: string }[] = [
   { label: "Instagram", handle: "@chapaabaporu", url: "https://www.instagram.com/chapaabaporu/" },
   { label: "E-mail", handle: "abaporu.cace@gmail.com", url: "mailto:abaporu.cace@gmail.com" },
-  { label: "WhatsApp", handle: "XXXXX-XXXX", url: "" },
+  { label: "WhatsApp", handle: "+55 37 9181-5652", url: "https://wa.me/553791815652" },
 ];
 
 /** Link do botão PARTICIPE. Vazio = leva à página de contato. */
