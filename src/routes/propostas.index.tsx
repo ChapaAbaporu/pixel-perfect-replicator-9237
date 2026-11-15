@@ -7,7 +7,7 @@ export const Route = createFileRoute("/propostas/")({
   head: () => ({
     meta: [
       { title: "Propostas — Chapa Abaporu" },
-      { name: "description", content: "Propostas da Chapa Abaporu em DIREX, Comunicação, Relações Institucionais, Extensão e Pesquisa Tesouraria e Cultura." },
+      { name: "description", content: "Propostas da Chapa Abaporu em DIREX, Comunicação, Relações Institucionais, Ensino, Pesquisa e Extensão e Cultura." },
       { property: "og:title", content: "Propostas — Chapa Abaporu" },
       { property: "og:description", content: "Conheça as propostas por secretaria." },
       { property: "og:type", content: "website" },
