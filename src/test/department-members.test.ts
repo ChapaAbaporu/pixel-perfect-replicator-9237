@@ -26,7 +26,7 @@ describe("Department membership", () => {
     expect([...team, ...all].some((m) => m.name.includes("Sara"))).toBe(false);
     expect(getDepartmentMembers("cultura").map((m) => [m.name, m.role])).toEqual([["Jéssica Gonçalves", "Diretora de Cultura"], ["Miguel Angelo", "Diretor Adjunto de Cultura"]]);
     expect(getDepartmentMembers("comunicacao").slice(0, 2).map((m) => [m.name, m.role])).toEqual([["Rafael Borges", "Diretor de Comunicação"], ["Geovana Silva", "Diretora adjunta de Comunicação"]]);
-    expect(team.find((m) => m.name === "Zoe Ribas")?.role).toBe("Diretora de Relações Institucionais e Sociais");
+    expect(team.find((m) => m.name === "Zoe Ribas")?.role).toBe("Diretora de Relações Institucionais");
     expect(team.find((m) => m.name === "Ana Clara Carvalho")?.role).toBe("Diretora de Ensino, Pesquisa e Extensão");
   });
   it("leaves bios empty instead of placeholder text", () => {

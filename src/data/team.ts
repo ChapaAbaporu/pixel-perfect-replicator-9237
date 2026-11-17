@@ -15,7 +15,7 @@ import vitorPhoto from "@/assets/vitor-mota.jpeg.asset.json";
 import miguelPhoto from "@/assets/miguel-angelo.jpeg.asset.json";
 import zoePhoto from "@/assets/zoe-ribas.jpeg.asset.json";
 import anaClaraPhoto from "@/assets/ana-clara-carvalho.jpeg.asset.json";
-import jessicaPhoto from "@/assets/jessica-goncalves.jpeg.asset.json";
+import jessicaPhoto from "@/assets/jessica-goncalves.png.asset.json";
 import annePhoto from "@/assets/anne-alcantra.jpeg.asset.json";
 import geovanaPhoto from "@/assets/geovana-silva.jpeg.asset.json";
 
@@ -30,7 +30,7 @@ export type TeamMember = {
 
 /** Cada campo provisório tem um número próprio para busca e edição manual. */
 export const team: TeamMember[] = [
-  { id: "integrante-1", name: "Júlio César", role: "Presidente", bio: "Caio Júlio César foi um patrício, líder militar e político romano. Desempenhou um papel crítico na transformação da República Romana no Império Romano.", photo: julioPhoto.url, links: [] },
+  { id: "integrante-1", name: "Júlio César", role: "Presidente", bio: "Júlio César Moraes Soares é poços-caldense, do sul de Minas, e candidato a Presidente do Centro Acadêmico de Ciências do Estado (CACE/UFMG). Graduando em Ciências do Estado pela Universidade Federal de Minas Gerais (UFMG), integra o corpo editorial da Revice, a Revista de Ciências do Estado e do Jornal Nova Roma. É representante discente no Colegiado de Extensão da Faculdade de Direito (Cenex) e membro do Departamento de Ensino, Pesquisa e Extensão do CACE.", photo: julioPhoto.url, links: [] },
   { id: "integrante-2", name: "Júlia Francinni", role: "Vice-Presidente", bio: "", photo: juliaFrancinniPhoto.url, links: [] },
   { id: "integrante-5", name: "Luísa Gonçalves", role: "Primeira Secretária", bio: "", photo: luisaPhoto.url, links: [] },
   { id: "integrante-6", name: "Ana Carolina Delgado", role: "Segunda Secretária", bio: "", photo: anaCarolinaPhoto.url, links: [] },
@@ -38,8 +38,8 @@ export const team: TeamMember[] = [
   { id: "integrante-4", name: "Vitor Mota", role: "Segundo Tesoureiro", bio: "Vitor Mota é sul-mineiro, graduando em Ciências do Estado pela Universidade Federal de Minas Gerais (UFMG) e candidato a Segundo Tesoureiro do Centro Acadêmico de Ciências do Estado (CACE). Estagiário na Secretaria de Estado de Planejamento e Gestão de Minas Gerais (SEPLAG-MG) e voluntário no Instituto Akati Brasil. Técnico em Informática pelo Instituto Federal do Sul de Minas Gerais (IFSULDEMINAS). Possui formação complementar em Processo Legislativo pelo Projeto Politeia e, anteriormente, foi bolsista de Arte e Cultura pelo Projeto Cultiva.", photo: vitorPhoto.url, links: [] },
   { id: "integrante-9", name: "Ana Clara Carvalho", role: "Diretora de Ensino, Pesquisa e Extensão", bio: "Ana Clara Carvalho é Graduanda em Ciências do Estado pela Universidade Federal de Minas Gerais. Membro do Corpo Editorial da Revista de Ciências do Estado (Revice|UFMG). Pesquisadora extensionista do Laboratório de Tecnologias Públicas para o Setor Público (LabP2|UFMG). Monitora voluntária pelo Programa de Monitoria da Graduação da Faculdade de Direito da Universidade Federal de Minas Gerais na disciplina de Pensamento Jurídico Político Brasileiro no curso de Ciências do Estado. Monitora voluntária e membro do Grupo de Estudos: Fundamentos e Fundações do Direito Político.", photo: anaClaraPhoto.url, links: [] },
   { id: "integrante-10", name: "Anne Alcantra", role: "Diretora adjunta de Ensino, Pesquisa e Extensão", bio: "Graduanda em Ciências do Estado pela Universidade Federal de Minas Gerais (UFMG). Membro do Corpo Editorial da Revista de Ciências do Estado (Revice/UFMG) e extensionista do Laboratório de Tecnologias Públicas para o Setor Público (LABP²/UFMG). Monitora da disciplina Organização dos Poderes do Estado Brasileiro, vinculada ao Programa de Monitoria de Graduação do Departamento de Direito Público da Faculdade de Direito da UFMG e pesquisadora do projeto de pesquisa “Constitucionalismo Estrutural e Narrativa de Poder”.", photo: annePhoto.url, links: [] },
-  { id: "integrante-11", name: "Zoe Ribas", role: "Diretora de Relações Institucionais e Sociais", bio: "", photo: zoePhoto.url, links: [] },
-  { id: "integrante-12", name: "Júlia Mendes", role: "Diretora adjunta de Relações Institucionais e Sociais", bio: "", photo: juliaMendesPhoto.url, links: [] },
+  { id: "integrante-11", name: "Zoe Ribas", role: "Diretora de Relações Institucionais", bio: "", photo: zoePhoto.url, links: [] },
+  { id: "integrante-12", name: "Júlia Mendes", role: "Diretora adjunta de Relações Institucionais", bio: "", photo: juliaMendesPhoto.url, links: [] },
   { id: "integrante-7", name: "Rafael Borges", role: "Diretor de Comunicação", bio: "", photo: rafaelPhoto.url, links: [] },
   { id: "geovana-silva", name: "Geovana Silva", role: "Diretora adjunta de Comunicação", bio: "Geovana Silva é graduanda em Ciências do Estado na UFMG e candidata a diretora adjunta do Departamento de Comunicação na chapa Abaporu. Integra o Departamento de Cultura na gestão atual do CACE, faz parte do corpo editorial da Revista de Ciências do Estado (REVICE) e é estagiária na Secretaria de Estado de Cultura e Turismo de Minas Gerais.", photo: geovanaPhoto.url, links: [] },
   { id: "integrante-8", name: "Jéssica Gonçalves", role: "Diretora de Cultura", bio: "", photo: jessicaPhoto.url, links: [] },

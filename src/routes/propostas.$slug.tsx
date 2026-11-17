@@ -4,7 +4,7 @@ import { PageHero } from "@/components/site/Sections";
 import { CategoryCard, ProposalCard } from "@/components/site/Proposals";
 import { TeamCarousel } from "@/components/site/TeamCarousel";
 import { getDepartmentMembers } from "@/data/team";
-import { categories, getCategory } from "@/data/proposals";
+import { categories, getCategory, type Proposal } from "@/data/proposals";
 
 export const Route = createFileRoute("/propostas/$slug")({
   loader: ({ params }) => {
@@ -30,6 +30,17 @@ export const Route = createFileRoute("/propostas/$slug")({
   component: CategoryPage,
 });
 
+/** Agrupa propostas por subdivisão, mantendo a ordem original. */
+function groupProposals(list: Proposal[]): [string | undefined, Proposal[]][] {
+  const groups: [string | undefined, Proposal[]][] = [];
+  for (const p of list) {
+    const last = groups[groups.length - 1];
+    if (last && last[0] === p.group) last[1].push(p);
+    else groups.push([p.group, [p]]);
+  }
+  return groups;
+}
+
 function CategoryPage() {
   const { category: c } = Route.useLoaderData();
   const others = categories.filter((o) => o.slug !== c.slug);
@@ -38,9 +49,14 @@ function CategoryPage() {
       <PageHero title={c.name} text={c.intro} tone={c.tone} />
       <section className="bg-brand-cream texture-paper">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-6">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {c.proposals.map((p) => <ProposalCard key={p.title} p={p} category={c} />)}
-          </div>
+          {groupProposals(c.proposals).map(([group, items]) => (
+            <div key={group ?? "all"} className={group ? "mb-14 last:mb-0" : undefined}>
+              {group && <h2 className="mb-6 text-4xl text-brand-green">{group}</h2>}
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {items.map((p) => <ProposalCard key={p.title} p={p} category={c} />)}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
       <section className="bg-brand-cream texture-paper" aria-labelledby="department-members">
