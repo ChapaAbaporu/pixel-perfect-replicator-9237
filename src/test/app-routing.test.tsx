@@ -15,10 +15,10 @@ describe("App routing", () => {
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
 
-  it("resolves DIREX through the proposal detail route", () => {
+  it("resolves Presidência through the proposal detail route", () => {
     const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
-    const matches = router.matchRoutes("/propostas/direx");
+    const matches = router.matchRoutes("/propostas/presidencia");
     expect(matches.at(-1)?.routeId).toBe("/propostas/$slug");
-    expect(matches.at(-1)?.params).toMatchObject({ slug: "direx" });
+    expect(matches.at(-1)?.params).toMatchObject({ slug: "presidencia" });
   });
 });

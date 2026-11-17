@@ -55,7 +55,9 @@ export const departmentOnlyMembers: TeamMember[] = [
 
 /** Referências explícitas mantêm os perfis oficiais compartilhados. */
 const departmentMemberIds: Record<string, string[]> = {
-  direx: ["integrante-1", "integrante-2", "integrante-5", "integrante-6", "integrante-3", "integrante-4"],
+  presidencia: ["integrante-1", "integrante-2"],
+  secretaria: ["integrante-5", "integrante-6"],
+  tesouraria: ["integrante-3", "integrante-4"],
   comunicacao: ["integrante-7", "geovana-silva", "alice-teles"],
   "extensao-e-pesquisa": ["integrante-9", "integrante-10", "lucca-castro"],
   "relacoes-institucionais": ["integrante-11", "integrante-12", "guilherme-riedel"],

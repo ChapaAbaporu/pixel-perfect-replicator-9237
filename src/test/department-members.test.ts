@@ -3,13 +3,11 @@ import { getDepartmentMembers, team } from "@/data/team";
 import { getCategory } from "@/data/proposals";
 
 describe("Department membership", () => {
-  it("includes all six executive members in the requested order", () => {
-    expect(getDepartmentMembers("direx").map((m) => m.name)).toEqual([
-      "Júlio César", "Júlia Francinni", "Luísa Gonçalves", "Ana Carolina Delgado", "Beatriz Madureira", "Vitor Mota",
-    ]);
-  });
-  it("removes the separate treasury membership", () => {
-    expect(getDepartmentMembers("tesouraria")).toEqual([]);
+  it("splits the executive members into Presidência, Secretaria and Tesouraria", () => {
+    expect(getDepartmentMembers("presidencia").map((m) => m.name)).toEqual(["Júlio César", "Júlia Francinni"]);
+    expect(getDepartmentMembers("secretaria").map((m) => m.name)).toEqual(["Luísa Gonçalves", "Ana Carolina Delgado"]);
+    expect(getDepartmentMembers("tesouraria").map((m) => m.name)).toEqual(["Beatriz Madureira", "Vitor Mota"]);
+    expect(getDepartmentMembers("direx")).toEqual([]);
   });
   it.each([
     ["comunicacao", "Alice Teles", "Membro DCOM"],
@@ -18,11 +16,11 @@ describe("Department membership", () => {
   ])("keeps the additional member for %s out of the homepage", (slug, name, role) => {
     expect(getDepartmentMembers(slug)).toContainEqual(expect.objectContaining({ name, role }));
     expect(team.some((member) => member.name === name)).toBe(false);
-    const otherSlugs = ["direx", "tesouraria", "comunicacao", "extensao-e-pesquisa", "relacoes-institucionais", "cultura"].filter((other) => other !== slug);
+    const otherSlugs = ["presidencia", "secretaria", "tesouraria", "comunicacao", "extensao-e-pesquisa", "relacoes-institucionais", "cultura"].filter((other) => other !== slug);
     expect(otherSlugs.flatMap(getDepartmentMembers).some((member) => member.name === name)).toBe(false);
   });
   it("removes Sara and assigns the new directors", () => {
-    const all = ["direx", "comunicacao", "extensao-e-pesquisa", "relacoes-institucionais", "cultura"].flatMap(getDepartmentMembers);
+    const all = ["presidencia", "secretaria", "tesouraria", "comunicacao", "extensao-e-pesquisa", "relacoes-institucionais", "cultura"].flatMap(getDepartmentMembers);
     expect([...team, ...all].some((m) => m.name.includes("Sara"))).toBe(false);
     expect(getDepartmentMembers("cultura").map((m) => [m.name, m.role])).toEqual([["Jéssica Gonçalves", "Diretora de Cultura"], ["Miguel Angelo", "Diretor Adjunto de Cultura"]]);
     expect(getDepartmentMembers("comunicacao").slice(0, 2).map((m) => [m.name, m.role])).toEqual([["Rafael Borges", "Diretor de Comunicação"], ["Geovana Silva", "Diretora adjunta de Comunicação"]]);

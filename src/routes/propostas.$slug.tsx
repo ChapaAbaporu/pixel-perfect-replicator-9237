@@ -8,7 +8,7 @@ import { categories, getCategory, type Proposal } from "@/data/proposals";
 
 export const Route = createFileRoute("/propostas/$slug")({
   loader: ({ params }) => {
-    if (params.slug === "tesouraria") throw redirect({ to: "/propostas/$slug", params: { slug: "direx" } });
+    if (params.slug === "direx") throw redirect({ to: "/propostas/$slug", params: { slug: "presidencia" } });
     const category = getCategory(params.slug);
     if (!category) throw notFound();
     return { category };

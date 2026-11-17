@@ -4,7 +4,9 @@ import { contacts } from "@/data/site";
 
 describe("Integral proposals update", () => {
   it.each([
-    ["direx", "DIREX", 21, "União Institucional"],
+    ["presidencia", "Presidência", 9, "União Institucional"],
+    ["secretaria", "Secretaria", 7, "Arquivo e Documentação"],
+    ["tesouraria", "Tesouraria", 5, "Clube CACE"],
     ["cultura", "Cultura (DCULT)", 13, "Planejamento Cultural"],
     ["relacoes-institucionais", "Relações Institucionais (DRI)", 8, "Relações com a Sociedade Civil"],
     ["comunicacao", "Comunicação (DCOM)", 9, "Divulgação do Curso"],
@@ -16,15 +18,11 @@ describe("Integral proposals update", () => {
     expect(c?.proposals[0]?.title).toBe(firstTitle);
     expect(c?.proposals.every((p) => p.summary.length > 0 && !p.summary.startsWith("Inserir texto"))).toBe(true);
   });
-  it("incorporates the five treasury proposals into DIREX", () => {
-    const direx = getCategory("direx")!;
-    expect(direx.proposals.filter((p) => p.group === "Presidência")).toHaveLength(9);
-    expect(direx.proposals.filter((p) => p.group === "Secretaria")).toHaveLength(7);
-    expect(direx.proposals.filter((p) => p.group === "Tesouraria")).toHaveLength(5);
-    expect(getCategory("tesouraria")).toBeUndefined();
+  it("no longer has a DIREX category", () => {
+    expect(getCategory("direx")).toBeUndefined();
   });
   it("keeps the category order", () => {
-    expect(categories.map((c) => c.slug)).toEqual(["direx", "extensao-e-pesquisa", "relacoes-institucionais", "comunicacao", "cultura"]);
+    expect(categories.map((c) => c.slug)).toEqual(["presidencia", "secretaria", "tesouraria", "extensao-e-pesquisa", "relacoes-institucionais", "comunicacao", "cultura"]);
   });
   it("uses the new WhatsApp number", () => {
     const w = contacts.find((c) => c.label === "WhatsApp");

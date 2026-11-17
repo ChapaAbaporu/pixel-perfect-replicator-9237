@@ -11,7 +11,7 @@ export type Proposal = {
   actions?: string[];
   result?: string;
   status?: string;
-  /** Subdivisão interna (ex.: Presidência, Secretaria, Tesouraria na DIREX). */
+  /** Subdivisão interna (opcional). */
   group?: string;
 };
 
@@ -29,33 +29,51 @@ export type Category = {
 
 export const categories: Category[] = [
   {
-    slug: "direx",
-    name: "DIREX",
+    slug: "presidencia",
+    name: "Presidência",
     tone: "coral",
     icon: "users",
-    intro: "Responsável pela coordenação geral e representação institucional do CACE, articulação entre os departamentos e organização administrativa da gestão, incluindo o registro de atas, documentos, reuniões e o acompanhamento das decisões, garantindo o bom funcionamento do Centro Acadêmico. Responsável pela administração financeira do CACE, organizando receitas, despesas, arrecadações e prestação de contas, garantindo transparência e recursos para a realização das atividades e projetos.",
+    intro: "Responsável pela coordenação geral e representação institucional do CACE e pela articulação entre os departamentos, garantindo o bom funcionamento do Centro Acadêmico.",
     proposals: [
-      { title: "União Institucional", summary: "Aproximar e articular as entidades discentes do curso, como Revice, Supernova e Jornal Nova Roma, fortalecendo Ciências do Estado como um todo.", group: "Presidência" },
-      { title: "Inserção no Mercado", summary: "Ampliar as oportunidades de estágio e emprego por meio do diálogo com docentes, estudantes, egressos e agentes públicos.", group: "Presidência" },
-      { title: "Representação Estudantil", summary: "Atuar ativamente em colegiados, conselhos, departamentos e congregação, defendendo os interesses do curso e dos estudantes.", group: "Presidência" },
-      { title: "Reforma Curricular", summary: "Acompanhar e divulgar o processo de reforma curricular, garantindo a participação discente e promovendo debates sobre as mudanças nas ementas.", group: "Presidência" },
-      { title: "Diálogo com a Faculdade", summary: "Qualificar a relação com docentes e com a direção da Faculdade, buscando maior respeito, reconhecimento e visibilidade para Ciências do Estado.", group: "Presidência" },
-      { title: "Gestão Integrada do CACE", summary: "Acompanhar os projetos de todos os departamentos, oferecendo apoio à sua elaboração, articulação e execução.", group: "Presidência" },
-      { title: "Infraestrutura e Ocupação do Espaço", summary: "Acompanhar a manutenção, melhoria e limpeza do espaço do CACE, além de promover eventos que estimulem a vivência estudantil na Faculdade.", group: "Presidência" },
-      { title: "Permanência e Inclusão", summary: "Defender a permanência estudantil e apoiar PCDs, pessoas trans, estudantes mais velhos, intercampi, intercambistas e ingressantes por heteroidentificação.", group: "Presidência" },
-      { title: "Prática e Vivência Política", summary: "Organizar visitas técnicas a instituições públicas e espaços de decisão, aproximando os estudantes da prática profissional.", group: "Presidência" },
-      { title: "Arquivo e Documentação", summary: "Manter um arquivo digital padronizado, reunindo atas, ofícios, requerimentos e certificados de fácil acesso.", group: "Secretaria" },
-      { title: "Registro de Decisões", summary: "Documentar os encaminhamentos das reuniões em planilhas compartilhadas, permitindo a consulta por todos os integrantes da gestão.", group: "Secretaria" },
-      { title: "Transparência Interna", summary: "Garantir que os integrantes da gestão tenham acesso às atas, planilhas e demais informações institucionais necessárias ao funcionamento do CACE.", group: "Secretaria" },
-      { title: "Regularização Administrativa", summary: "Verificar, em conjunto com a Presidência, a situação documental, estatutária e cadastral do Centro Acadêmico, auxiliando na resolução de eventuais pendências.", group: "Secretaria" },
-      { title: "Calendário e Integração", summary: "Criar um calendário compartilhado de reuniões e eventos, facilitando a circulação de informações entre o CACE, os discentes e os docentes.", group: "Secretaria" },
-      { title: "Registro das Atividades", summary: "Organizar registros periódicos e colaborativos das atividades de cada departamento, favorecendo a integração, a prestação de contas e a continuidade da gestão.", group: "Secretaria" },
-      { title: "Memória e Transição", summary: "Preservar documentos, projetos e contatos institucionais, preparando uma síntese das atividades para facilitar a transição entre gestões.", group: "Secretaria" },
-      { title: "Clube CACE", summary: "Criar o Clube CACE, com carteirinha ou mensalidade e benefícios para os participantes, ampliando as possibilidades de arrecadação do Centro Acadêmico.", group: "Tesouraria" },
-      { title: "Fortalecimento do Butecace", summary: "Fortalecer o Butecace como espaço de convivência entre estudantes e como fonte de recursos para o CACE.", group: "Tesouraria" },
-      { title: "Produtos do CACE", summary: "Ampliar a variedade de produtos comercializados pelo Centro Acadêmico, diversificando as possibilidades de arrecadação.", group: "Tesouraria" },
-      { title: "Sebos e Bazares", summary: "Realizar sebos e bazares mais de uma vez por semestre, ampliando as iniciativas de arrecadação e circulação de produtos.", group: "Tesouraria" },
-      { title: "Organização Financeira", summary: "Manter planilhas de compras e vendas e acompanhar as receitas e despesas das festas, fortalecendo o controle e a transparência financeira da gestão.", group: "Tesouraria" },
+      { title: "União Institucional", summary: "Aproximar e articular as entidades discentes do curso, como Revice, Supernova e Jornal Nova Roma, fortalecendo Ciências do Estado como um todo." },
+      { title: "Inserção no Mercado", summary: "Ampliar as oportunidades de estágio e emprego por meio do diálogo com docentes, estudantes, egressos e agentes públicos." },
+      { title: "Representação Estudantil", summary: "Atuar ativamente em colegiados, conselhos, departamentos e congregação, defendendo os interesses do curso e dos estudantes." },
+      { title: "Reforma Curricular", summary: "Acompanhar e divulgar o processo de reforma curricular, garantindo a participação discente e promovendo debates sobre as mudanças nas ementas." },
+      { title: "Diálogo com a Faculdade", summary: "Qualificar a relação com docentes e com a direção da Faculdade, buscando maior respeito, reconhecimento e visibilidade para Ciências do Estado." },
+      { title: "Gestão Integrada do CACE", summary: "Acompanhar os projetos de todos os departamentos, oferecendo apoio à sua elaboração, articulação e execução." },
+      { title: "Infraestrutura e Ocupação do Espaço", summary: "Acompanhar a manutenção, melhoria e limpeza do espaço do CACE, além de promover eventos que estimulem a vivência estudantil na Faculdade." },
+      { title: "Permanência e Inclusão", summary: "Defender a permanência estudantil e apoiar PCDs, pessoas trans, estudantes mais velhos, intercampi, intercambistas e ingressantes por heteroidentificação." },
+      { title: "Prática e Vivência Política", summary: "Organizar visitas técnicas a instituições públicas e espaços de decisão, aproximando os estudantes da prática profissional." },
+    ],
+  },
+  {
+    slug: "secretaria",
+    name: "Secretaria",
+    tone: "yellow",
+    icon: "book",
+    intro: "Responsável pela organização administrativa da gestão, incluindo o registro de atas, documentos, reuniões e o acompanhamento das decisões.",
+    proposals: [
+      { title: "Arquivo e Documentação", summary: "Manter um arquivo digital padronizado, reunindo atas, ofícios, requerimentos e certificados de fácil acesso." },
+      { title: "Registro de Decisões", summary: "Documentar os encaminhamentos das reuniões em planilhas compartilhadas, permitindo a consulta por todos os integrantes da gestão." },
+      { title: "Transparência Interna", summary: "Garantir que os integrantes da gestão tenham acesso às atas, planilhas e demais informações institucionais necessárias ao funcionamento do CACE." },
+      { title: "Regularização Administrativa", summary: "Verificar, em conjunto com a Presidência, a situação documental, estatutária e cadastral do Centro Acadêmico, auxiliando na resolução de eventuais pendências." },
+      { title: "Calendário e Integração", summary: "Criar um calendário compartilhado de reuniões e eventos, facilitando a circulação de informações entre o CACE, os discentes e os docentes." },
+      { title: "Registro das Atividades", summary: "Organizar registros periódicos e colaborativos das atividades de cada departamento, favorecendo a integração, a prestação de contas e a continuidade da gestão." },
+      { title: "Memória e Transição", summary: "Preservar documentos, projetos e contatos institucionais, preparando uma síntese das atividades para facilitar a transição entre gestões." },
+    ],
+  },
+  {
+    slug: "tesouraria",
+    name: "Tesouraria",
+    tone: "terracotta",
+    icon: "coins",
+    intro: "Responsável pela administração financeira do CACE, organizando receitas, despesas, arrecadações e prestação de contas, garantindo transparência e recursos para a realização das atividades e projetos.",
+    proposals: [
+      { title: "Clube CACE", summary: "Criar o Clube CACE, com carteirinha ou mensalidade e benefícios para os participantes, ampliando as possibilidades de arrecadação do Centro Acadêmico." },
+      { title: "Fortalecimento do Butecace", summary: "Fortalecer o Butecace como espaço de convivência entre estudantes e como fonte de recursos para o CACE." },
+      { title: "Produtos do CACE", summary: "Ampliar a variedade de produtos comercializados pelo Centro Acadêmico, diversificando as possibilidades de arrecadação." },
+      { title: "Sebos e Bazares", summary: "Realizar sebos e bazares mais de uma vez por semestre, ampliando as iniciativas de arrecadação e circulação de produtos." },
+      { title: "Organização Financeira", summary: "Manter planilhas de compras e vendas e acompanhar as receitas e despesas das festas, fortalecendo o controle e a transparência financeira da gestão." },
     ],
   },
   {
