@@ -7,8 +7,8 @@ describe("Integral proposals update", () => {
     ["presidencia", "Presidência", 9, "União Institucional"],
     ["secretaria", "Secretaria", 7, "Arquivo e Documentação"],
     ["tesouraria", "Tesouraria", 5, "Clube CACE"],
-    ["cultura", "Cultura (DCULT)", 13, "Planejamento Cultural"],
-    ["relacoes-institucionais", "Relações Institucionais (DRI)", 8, "Relações com a Sociedade Civil"],
+    ["cultura", "Cultura (DC)", 13, "Planejamento Cultural"],
+    ["relacoes-institucionais", "Relações Institucionais e Sociais (DRIS)", 8, "Relações com a Sociedade Civil"],
     ["comunicacao", "Comunicação (DCOM)", 9, "Divulgação do Curso"],
     ["extensao-e-pesquisa", "Ensino, Pesquisa e Extensão (DEPE)", 7, "Formação Acadêmica Complementar"],
   ])("replaces the list for %s", (slug, name, count, firstTitle) => {

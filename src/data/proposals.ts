@@ -31,7 +31,7 @@ export const categories: Category[] = [
   {
     slug: "presidencia",
     name: "Presidência",
-    tone: "coral",
+    tone: "blue",
     icon: "users",
     intro: "Responsável pela coordenação geral e representação institucional do CACE e pela articulação entre os departamentos, garantindo o bom funcionamento do Centro Acadêmico.",
     proposals: [
@@ -49,7 +49,7 @@ export const categories: Category[] = [
   {
     slug: "secretaria",
     name: "Secretaria",
-    tone: "yellow",
+    tone: "red",
     icon: "book",
     intro: "Responsável pela organização administrativa da gestão, incluindo o registro de atas, documentos, reuniões e o acompanhamento das decisões.",
     proposals: [
@@ -65,7 +65,7 @@ export const categories: Category[] = [
   {
     slug: "tesouraria",
     name: "Tesouraria",
-    tone: "terracotta",
+    tone: "yellow",
     icon: "coins",
     intro: "Responsável pela administração financeira do CACE, organizando receitas, despesas, arrecadações e prestação de contas, garantindo transparência e recursos para a realização das atividades e projetos.",
     proposals: [
@@ -79,7 +79,7 @@ export const categories: Category[] = [
   {
     slug: "extensao-e-pesquisa",
     name: "Ensino, Pesquisa e Extensão (DEPE)",
-    tone: "green",
+    tone: "yellow",
     icon: "book",
     intro: "Responsável por incentivar a formação acadêmica complementar, aproximar estudantes e professores e promover atividades de ensino, pesquisa e extensão, como palestras, minicursos, oficinas e jornadas acadêmicas.",
     proposals: [
@@ -94,8 +94,8 @@ export const categories: Category[] = [
   },
   {
     slug: "relacoes-institucionais",
-    name: "Relações Institucionais (DRI)",
-    tone: "terracotta",
+    name: "Relações Institucionais e Sociais (DRIS)",
+    tone: "blue",
     icon: "handshake",
     intro: "Responsável por fortalecer o diálogo e as parcerias do CACE com outras entidades, instituições e comunidades, aproximando o curso de diferentes espaços acadêmicos, sociais e culturais.",
     proposals: [
@@ -129,8 +129,8 @@ export const categories: Category[] = [
   },
   {
     slug: "cultura",
-    name: "Cultura (DCULT)",
-    tone: "blue",
+    name: "Cultura (DC)",
+    tone: "red",
     icon: "palette",
     intro: "Inserir texto 183",
     proposals: [
