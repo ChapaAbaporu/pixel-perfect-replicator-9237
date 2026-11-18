@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react";
 import path from "node:path";
 
 export default defineConfig({
-  base: "/pixel-perfect-replicator-9237/",
   plugins: [react()],
   test: {
     environment: "jsdom",
